@@ -1,0 +1,54 @@
+body {
+  filter: sepia(100px);
+  background-color: darkslategrey;
+}
+
+header {
+  background-image: url("/img/portada.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 60vh;
+}
+header nav {
+  background-color: rgb(20, 37, 37);
+}
+header nav .navbar-toggler {
+  color: blanchedalmond;
+  background-color: blanchedalmond;
+}
+
+section {
+  width: 100vw;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: darkslategrey;
+  box-shadow: 2px 5px blanchedalmond;
+}
+.card .card-body {
+  text-align: center;
+  color: blanchedalmond;
+}
+.card .card-title {
+  text-shadow: 2px 2px gray;
+  font-weight: bold;
+  font-size: 25px;
+}
+.card .btn {
+  background-color: rgb(14, 29, 29);
+  color: blanchedalmond;
+}
+
+footer {
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: rgb(20, 37, 37);
+}
+footer .foo_text {
+  color: blanchedalmond;
+}/*# sourceMappingURL=style.css.map */

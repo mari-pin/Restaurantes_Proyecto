@@ -4,14 +4,15 @@ body {
 }
 
 header {
-  background-image: url("/img/portada.jpg");
+  background-image: url("/img/manipulation-4412444_1280.jpg");
+  background-color: 0.2;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
 }
 header nav {
-  background-color: rgb(20, 37, 37);
+  background-color: transparent;
 }
 header nav .navbar-toggler {
   color: blanchedalmond;
@@ -21,30 +22,64 @@ header button {
   color: blanchedalmond;
 }
 header h3 {
-  color: blanchedalmond;
-  font-family: "Dancing Script, serif";
+  position: relative;
+  top: 230px;
+  font-size: 50px;
+  font-family: "Henny Penny", serif;
   font-weight: 400;
+  font-size: 45px;
+  color: #667f61;
+  animation: animacionH3 5s ease;
   font-style: normal;
+  font-weight: 900;
+}
+@keyframes animacion {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animacionH3 {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(50px);
+    opacity: 1;
+  }
 }
 header h1 {
-  color: blanchedalmond;
-  font-family: "new-spirit,serif";
-  text-shadow: 2px 2px #667f61;
+  animation: animacion 5s;
+  position: relative;
+  top: 30%;
+  color: #667f61;
+  font-family: "new-spirit", serif;
+  text-shadow: 1px 2px #603008;
   font-size: 2.5rem;
   font-weight: 400;
-  line-height: 1em;
   text-align: center;
   text-transform: uppercase;
 }
 header .nav-link {
   color: blanchedalmond !important;
 }
+header .offcanvas {
+  margin-left: 20px;
+}
 header .offcanvas-body {
   background-color: darkslategrey;
+  padding-left: 100px;
 }
 header .offcanvas-header {
+  margin-left: 50px;
+  height: 20%;
   font-family: "new-spirit,serif";
-  font-size: 40px;
+  font-size: 20px;
 }
 
 section {
@@ -62,15 +97,29 @@ section {
   background-color: darkslategrey;
   box-shadow: 2px 5px blanchedalmond;
   margin-top: 30px;
+  margin-left: 8px;
 }
 .card .card-body {
   text-align: center;
   color: blanchedalmond;
 }
 .card .card-title {
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 45px;
   text-shadow: 2px 2px gray;
   font-weight: bold;
   font-size: 25px;
+}
+.card .card-text {
+  font-family: "new-spirit,serif";
+  height: 0px;
+  visibility: hidden;
+}
+.card:hover .card-text {
+  height: 70%;
+  visibility: visible;
+  transition: 0.2s;
 }
 .card .btn {
   background-color: rgb(14, 29, 29);
@@ -78,6 +127,8 @@ section {
 }
 
 footer {
+  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
+  bottom: 0px;
   justify-content: space-around;
   margin-top: 50px;
   background-color: rgb(20, 37, 37);

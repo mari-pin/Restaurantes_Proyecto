@@ -8,7 +8,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
 }
 header nav {
   background-color: rgb(20, 37, 37);
@@ -17,18 +17,51 @@ header nav .navbar-toggler {
   color: blanchedalmond;
   background-color: blanchedalmond;
 }
+header button {
+  color: blanchedalmond;
+}
+header h3 {
+  color: blanchedalmond;
+  font-family: "Dancing Script, serif";
+  font-weight: 400;
+  font-style: normal;
+}
+header h1 {
+  color: blanchedalmond;
+  font-family: "new-spirit,serif";
+  text-shadow: 2px 2px #667f61;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+header .nav-link {
+  color: blanchedalmond !important;
+}
+header .offcanvas-body {
+  background-color: darkslategrey;
+}
+header .offcanvas-header {
+  font-family: "new-spirit,serif";
+  font-size: 40px;
+}
 
 section {
   width: 100vw;
   margin-top: 100px;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
   border-radius: 20px;
   background-color: darkslategrey;
   box-shadow: 2px 5px blanchedalmond;
+  margin-top: 30px;
 }
 .card .card-body {
   text-align: center;
@@ -51,4 +84,15 @@ footer {
 }
 footer .foo_text {
   color: blanchedalmond;
+  display: flex;
+  justify-content: space-around;
+}
+footer .foo_text p {
+  margin: 10px;
+  font-size: 20px;
+}
+footer .foo_icons i {
+  color: bisque;
+  margin: 10px;
+  font-size: 25px;
 }/*# sourceMappingURL=style.css.map */

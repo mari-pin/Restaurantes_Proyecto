@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+   
+   
+   // Añadir evento de reservar
     const destino = document.getElementById("destino");
     const opcionesReserva = document.getElementById("opcionesReserva");
     const datosUsuario = document.getElementById("datosUsuario");
@@ -25,5 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
         reservaForm.reset();
         opcionesReserva.style.display = "none";
         datosUsuario.style.display = "none";
+    });
+
+    // Añadir evento a los botones de alergenos
+    const botones = document.querySelectorAll(".ver-alergenos");
+    
+    botones.forEach(boton => {
+        boton.addEventListener("click", function () {
+            const alergenos = this.getAttribute("data-alergenos");
+            alert("Alérgenos: " + alergenos);
+        });
     });
 });

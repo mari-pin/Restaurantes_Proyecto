@@ -130,7 +130,7 @@ main {
 }
 .container form {
   overflow: hidden;
-  background-color: blanchedalmond;
+  background-color: rgba(202, 206, 204, 0.806);
   border-radius: 10px;
   opacity: 0.9;
   width: 100%;

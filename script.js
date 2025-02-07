@@ -1,0 +1,42 @@
+document.addEventListener("DOMContentLoaded", function () {
+   
+   
+   // Añadir evento de reservar
+    const destino = document.getElementById("destino");
+    const opcionesReserva = document.getElementById("opcionesReserva");
+    const datosUsuario = document.getElementById("datosUsuario");
+    const reservaForm = document.getElementById("reservaForm");
+
+    destino.addEventListener("change", function () {
+        if (destino.value) {
+            opcionesReserva.style.display = "block";
+        } else {
+            opcionesReserva.style.display = "none";
+            datosUsuario.style.display = "none";
+        }
+    });
+
+    opcionesReserva.addEventListener("input", function () {
+        if (document.getElementById("fecha").value && document.getElementById("hora").value) {
+            datosUsuario.style.display = "block";
+        }
+    });
+
+    reservaForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("¡Reserva completada con éxito!");
+        reservaForm.reset();
+        opcionesReserva.style.display = "none";
+        datosUsuario.style.display = "none";
+    });
+
+    // Añadir evento a los botones de alergenos
+    const botones = document.querySelectorAll(".ver-alergenos");
+    
+    botones.forEach(boton => {
+        boton.addEventListener("click", function () {
+            const alergenos = this.getAttribute("data-alergenos");
+            alert("Alérgenos: " + alergenos);
+        });
+    });
+});

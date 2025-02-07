@@ -1,0 +1,182 @@
+@mixin letraMarca {
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+@mixin letraTextos {
+  font-family: "new-spirit,serif";
+}
+body {
+  filter: sepia(100px);
+  background-color: darkslategrey;
+}
+header {
+  background-image: url("/img/manipulation-4412444_1280.jpg");
+  background-color: 0.2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 10vh;
+
+  nav {
+    background-color: transparent;
+
+    .navbar-toggler {
+      color: blanchedalmond;
+      background-color: blanchedalmond;
+    }
+  }
+  button {
+    color: blanchedalmond;
+  }
+
+  h3 {
+    position: relative;
+    top: 230px;
+    font-size: 50px;
+    @include letraMarca();
+    color: #667f61;
+    animation: animacionH3 5s ease;
+    font-style: normal;
+    font-weight: 900;
+  }
+  @keyframes animacion {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes animacionH3 {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(50px);
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    animation: animacion 5s;
+    position: relative;
+    top: 30%;
+    color: #667f61;
+    font-family: "new-spirit", serif;
+    text-shadow: 1px 2px #603008;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .nav-link {
+    color: blanchedalmond !important;
+  }
+  .offcanvas {
+    margin-left: 20px;
+  }
+
+  .offcanvas-body {
+    background-color: darkslategrey;
+    padding-left: 100px;
+  }
+  .offcanvas-header {
+    margin-left: 50px;
+    height: 20%;
+    @include letraTextos();
+    font-size: 20px;
+  }
+}
+footer{
+    width: 100%;
+    position: absolute;/*para que se quede fijo en la pantalla al hacer scroll*/
+    bottom: 0px;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: rgb(20, 37, 37);
+
+    .foo_text{
+        color:  blanchedalmond;
+        display: flex;
+        justify-content: space-around;
+        
+        p{
+            margin: 10px;
+            font-size: 20px;
+        }
+
+    }
+    
+    .foo_icons i{
+            color: bisque;
+            margin: 10px;
+            font-size: 25px;
+    
+    }
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+/* formulario */
+.container {
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 blanchedalmond;
+  width: 50%;
+  height: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 50px;
+  
+  text-align: center;
+
+  .destino {
+    color: darkslategrey;
+    font-weight: 900;
+    font-family: "Henny Penny", serif;
+  }
+
+  form {
+    overflow: hidden;
+    background-color: rgba(202, 206, 204, 0.806);
+    border-radius: 10px;
+    opacity: 0.9;
+    width: 100%;
+    height: 80%;
+    font-weight: 900;
+   /*  overflow:scroll;
+    scrollbar-color: darkslategrey blanchedalmond; */
+    margin-top: 20px;
+    input {
+      margin-top: 10px;
+      width: 30%;
+      margin: 15px;
+      padding: 10px;
+      border-radius: 10px;
+      border:2px solid darkslategrey;
+      background-color: transparent;
+      border: none;    
+      color:darkslategrey;
+      @include letraTextos();
+      font-size: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(14, 29, 29);
+      color: blanchedalmond;
+      @include letraTextos();
+      font-size: 20px;
+    }
+  }
+}

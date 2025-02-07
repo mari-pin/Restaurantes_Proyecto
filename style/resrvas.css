@@ -9,7 +9,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 10vh;
 }
 header nav {
   background-color: transparent;
@@ -82,52 +82,9 @@ header .offcanvas-header {
   font-size: 20px;
 }
 
-section {
-  width: 100vw;
-  margin-top: 100px;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card {
-  border-radius: 20px;
-  background-color: darkslategrey;
-  box-shadow: 2px 5px blanchedalmond;
-  margin-top: 30px;
-  margin-left: 8px;
-}
-.card .card-body {
-  text-align: center;
-  color: blanchedalmond;
-}
-.card .card-title {
-  font-family: "Henny Penny", serif;
-  font-weight: 400;
-  font-size: 45px;
-  text-shadow: 2px 2px gray;
-  font-weight: bold;
-  font-size: 25px;
-}
-.card .card-text {
-  font-family: "new-spirit,serif";
-  height: 0px;
-  visibility: hidden;
-}
-.card:hover .card-text {
-  height: 70%;
-  visibility: visible;
-  transition: 0.2s;
-}
-.card .btn {
-  background-color: rgb(14, 29, 29);
-  color: blanchedalmond;
-}
-
 footer {
-  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
+  width: 100%;
+  position: absolute; /*para que se quede fijo en la pantalla al hacer scroll*/
   bottom: 0px;
   justify-content: space-around;
   margin-top: 50px;
@@ -146,4 +103,63 @@ footer .foo_icons i {
   color: bisque;
   margin: 10px;
   font-size: 25px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+/* formulario */
+.container {
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 blanchedalmond;
+  width: 50%;
+  height: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container .destino {
+  color: darkslategrey;
+  font-weight: 900;
+  font-family: "Henny Penny", serif;
+}
+.container form {
+  overflow: hidden;
+  background-color: rgba(202, 206, 204, 0.806);
+  border-radius: 10px;
+  opacity: 0.9;
+  width: 100%;
+  height: 80%;
+  font-weight: 900;
+  /*  overflow:scroll;
+   scrollbar-color: darkslategrey blanchedalmond; */
+  margin-top: 20px;
+}
+.container form input {
+  margin-top: 10px;
+  width: 30%;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid darkslategrey;
+  background-color: transparent;
+  border: none;
+  color: darkslategrey;
+  font-family: "new-spirit,serif";
+  font-size: 20px;
+}
+.container form button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(14, 29, 29);
+  color: blanchedalmond;
+  font-family: "new-spirit,serif";
+  font-size: 20px;
+}/*# sourceMappingURL=resrvas.css.map */

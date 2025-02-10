@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Añadir evento a los botones de alergenos
-    const botones = document.querySelectorAll(".ver-alergenos");
+  /*   const botones = document.querySelectorAll(".ver-alergenos");
     
     botones.forEach(boton => {
         boton.addEventListener("click", function () {
@@ -39,4 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Alérgenos: " + alergenos);
         });
     });
+
+ */
+
+
+  
+    
 });

@@ -1,29 +1,198 @@
 @charset "UTF-8";
 body {
-  background-color: #f8f9fa;
+  filter: sepia(100px);
+  background-color: rgba(47, 79, 79, 0.488);
 }
 
+header {
+  /*  background-image: url("/img/manipulation-4412444_1280.jpg");
+   background-color: 0.2;
+   background-size: cover;
+   background-repeat: no-repeat; */
+  width: 100vw;
+  height: 30vh;
+}
+header nav {
+  background-color: darkslategrey;
+}
+header .navbar-toggler {
+  color: blanchedalmond;
+  background-color: blanchedalmond;
+}
+
+button {
+  color: blanchedalmond;
+}
+
+h3 {
+  position: relative;
+  top: 50px;
+  font-size: 50px;
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 45px;
+  color: #667f61;
+  animation: animacionH3 5s ease;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@keyframes animacion {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animacionH3 {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(50px) translateY(-30px);
+    opacity: 1;
+  }
+}
 h1 {
-  color: #343a40;
-  font-weight: bold;
+  animation: animacion 5s;
+  position: relative;
+  top: 30%;
+  color: #667f61;
+  font-family: "new-spirit", serif;
+  text-shadow: 1px 2px #603008;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.card {
+.nav-link {
+  color: blanchedalmond !important;
+}
+
+.offcanvas {
+  margin-left: 20px;
+}
+
+.offcanvas-body {
+  background-color: darkslategrey;
+  padding-left: 100px;
+}
+
+.offcanvas-header {
+  margin-left: 50px;
+  height: 20%;
+  font-family: "new-spirit,serif";
+  font-size: 20px;
+}
+
+/* h1 {
+    color: #343a40;
+    font-weight: bold;
+} */
+/*cards entrenates*/
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card, .card-6, .card-5, .card-4, .card-3, .card-2, .card-1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+.card h5, .card-6 h5, .card-5 h5, .card-4 h5, .card-3 h5, .card-2 h5, .card-1 h5 {
+  color: rgb(251, 239, 222);
+  font-family: "new-spirit,serif";
+  font-weight: 900;
+  font-size: 35px;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.card-body {
+  visibility: hidden;
+  width: 0px;
+  height: 100px;
 }
 
-.card-img-top {
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.card:hover .card-body, .card-6:hover .card-body, .card-5:hover .card-body, .card-4:hover .card-body, .card-3:hover .card-body, .card-2:hover .card-body, .card-1:hover .card-body {
+  font-weight: 600;
+  align-content: center;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s all ease-in-out;
+  background-color: rgba(65, 66, 66, 0.568627451);
+  color: blanchedalmond;
 }
 
+.card-1 {
+  background-image: url("/img/menu (1).jpg");
+}
+.card-1 .card-title::after {
+  content: "Milhojas de Foie";
+  font-weight: bold;
+}
+
+.card-2 {
+  background-image: url("/img/menu (6).jpg");
+}
+.card-2 .card-title::after {
+  content: "Croquetas de Jamón";
+  font-weight: bold;
+}
+
+.card-3 {
+  background-image: url("/img/menu (4).jpg");
+}
+.card-3 .card-title::after {
+  content: "Focaccia de Verduras";
+  font-weight: bold;
+}
+
+.card-4 {
+  background-image: url("/img/menu (5).jpg");
+}
+.card-4 .card-title::after {
+  content: "Ensaladilla del mar con Hummus de Garbanzos";
+  font-weight: bold;
+}
+
+.card-5 {
+  background-image: url("/img/caption (8).jpg");
+}
+.card-5 .card-title::after {
+  content: "Caja de Maririscos Frescos";
+  font-weight: bold;
+}
+
+.card-6 {
+  background-image: url("/img/menu.jpg");
+}
+.card-6 .card-title::after {
+  content: "Pollo al Curry";
+  font-weight: bold;
+}
+
+/*botom xa ver alergenos falta crearlos*/
 .btn-primary {
   background-color: #007bff;
   border: none;
@@ -35,8 +204,65 @@ h1 {
 
 /* Estilos para los alérgenos */
 .alergenos {
+  text-align: center;
   font-size: 0.9rem;
-  color: #dc3545;
+  color: #144a4a;
   font-weight: bold;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(235, 240, 246, 0.4862745098);
+}
+
+/* media query pantalla pequeña */
+@media (max-width: 767.98px) {
+  div[class^=row] {
+    height: 100%;
+  }
+}
+/*principal*/
+.principal {
+  justify-content: center;
+}
+.principal h4 {
+  color: #e1ebe8;
+  font-family: "new-spirit,serif";
+  font-weight: 900;
+  font-size: 35px;
+  background-color: #134237;
+}
+.principal img:hover {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+.principal .card-text {
+  color: #e7f0ee;
+  position: static;
+  left: 0px;
+  background-color: #134237;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+}
+
+/*footer*/
+footer {
+  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
+  bottom: 0px;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: rgb(20, 37, 37);
+}
+footer .foo_text {
+  color: blanchedalmond;
+  display: flex;
+  justify-content: space-around;
+}
+footer .foo_text p {
+  margin: 10px;
+  font-size: 20px;
+}
+footer .foo_icons i {
+  color: bisque;
+  margin: 10px;
+  font-size: 25px;
 }/*# sourceMappingURL=carta.css.map */

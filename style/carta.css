@@ -6,9 +6,9 @@ body {
 
 header {
   /*  background-image: url("/img/manipulation-4412444_1280.jpg");
-   background-color: 0.2;
-   background-size: cover;
-   background-repeat: no-repeat; */
+    background-color: 0.2;
+    background-size: cover;
+    background-repeat: no-repeat; */
   width: 100vw;
   height: 30vh;
 }
@@ -58,14 +58,14 @@ h3 {
   }
 }
 h1 {
+  font-family: "new-spirit,serif";
   animation: animacion 5s;
   position: relative;
   top: 30%;
   color: #667f61;
-  font-family: "new-spirit", serif;
   text-shadow: 1px 2px #603008;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 900;
   text-align: center;
   text-transform: uppercase;
 }
@@ -90,10 +90,48 @@ h1 {
   font-size: 20px;
 }
 
-/* h1 {
-    color: #343a40;
-    font-weight: bold;
-} */
+h2 {
+  font-family: "new-spirit,serif";
+  color: #343a40;
+  font-weight: bold;
+  text-shadow: 3px 3px rgba(96, 129, 119, 0.7294117647);
+  letter-spacing: 2px;
+}
+h2::first-letter {
+  font-size: 50px;
+}
+
+/* div del icon plato */
+.plato {
+  width: 100%;
+  height: 10%;
+}
+
+.plato img {
+  mix-blend-mode: multiply;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  animation: moverPlato 5s infinite;
+  margin: 10px;
+}
+
+@keyframes moverPlato {
+  0% {
+    transform: translatex(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translatex(1000px);
+    opacity: 0;
+  }
+}
 /*cards entrenates*/
 .container {
   text-align: center;
@@ -109,7 +147,7 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card, .card-6, .card-5, .card-4, .card-3, .card-2, .card-1 {
+.card, .card-9, .card-8, .card-7, .card-6, .card-5, .card-4, .card-3, .card-2, .card-1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -120,7 +158,7 @@ h1 {
   transition: transform 0.3s ease-in-out;
   margin: 10px;
 }
-.card h5, .card-6 h5, .card-5 h5, .card-4 h5, .card-3 h5, .card-2 h5, .card-1 h5 {
+.card h5, .card-9 h5, .card-8 h5, .card-7 h5, .card-6 h5, .card-5 h5, .card-4 h5, .card-3 h5, .card-2 h5, .card-1 h5 {
   color: rgb(251, 239, 222);
   font-family: "new-spirit,serif";
   font-weight: 900;
@@ -133,7 +171,7 @@ h1 {
   height: 100px;
 }
 
-.card:hover .card-body, .card-6:hover .card-body, .card-5:hover .card-body, .card-4:hover .card-body, .card-3:hover .card-body, .card-2:hover .card-body, .card-1:hover .card-body {
+.card:hover .card-body, .card-9:hover .card-body, .card-8:hover .card-body, .card-7:hover .card-body, .card-6:hover .card-body, .card-5:hover .card-body, .card-4:hover .card-body, .card-3:hover .card-body, .card-2:hover .card-body, .card-1:hover .card-body {
   font-weight: 600;
   align-content: center;
   visibility: visible;
@@ -192,6 +230,30 @@ h1 {
   font-weight: bold;
 }
 
+.card-7 {
+  background-image: url("/img/postre1.jpg");
+}
+.card-7 .card-title::after {
+  content: "Torrija a la miel";
+  font-weight: bold;
+}
+
+.card-8 {
+  background-image: url("/img/postre2.webp");
+}
+.card-8 .card-title::after {
+  content: "Natilla de merengue";
+  font-weight: bold;
+}
+
+.card-9 {
+  background-image: url("/img/postre3.jpg");
+}
+.card-9 .card-title::after {
+  content: "Tarta de queso";
+  font-weight: bold;
+}
+
 /*botom xa ver alergenos falta crearlos*/
 .btn-primary {
   background-color: #007bff;
@@ -203,7 +265,7 @@ h1 {
 }
 
 /* Estilos para los alérgenos */
-.alergenos, .principal .alergenos {
+.alergenos {
   text-align: center;
   font-size: 0.9rem;
   color: #144a4a;
@@ -217,59 +279,194 @@ h1 {
 @media (max-width: 767.98px) {
   div[class^=row] {
     height: 100%;
+    width: 100%;
   }
 }
 /*principal*/
 .principal {
   justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  /*imagenes platos principales*/
 }
 .principal h4 {
+  filter: drop-shadow(2px 2px 2px #78eb35);
+  letter-spacing: 2px;
   color: #e1ebe8;
   font-family: "new-spirit,serif";
   font-weight: 900;
   font-size: 35px;
-  background-color: #134237;
 }
-.principal img:hover {
-  width: 100%;
-  transition: 0.5s all ease-in-out;
+.principal h4::first-letter {
+  font-size: 50px;
+}
+.principal .p_img1 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/menu.jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img1:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img2 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/caption (1).jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img2:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img3 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/caption (2).jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img3:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img4 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/caption (3).jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img4:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img5 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/caption (5).jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img5:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img6 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/caption (4).jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img6:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img7 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/caption (6).jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img7:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
+}
+.principal .p_img8 {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-image: url("/img/patolakeado.jpg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+}
+.principal .p_img8:hover {
+  background-size: cover;
+  transform: scale(1.1);
+  border-radius: 600px;
 }
 .principal .card-text {
   color: #e7f0ee;
   position: static;
-  -webkit-mask: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.328));
-          mask: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.328));
+  height: -moz-fit-content;
+  height: fit-content;
+  filter: drop-shadow(2px 2px 2px #000);
+  background-color: rgba(128, 128, 128, 0.376);
   left: 0px;
-  background-color: #134237;
-  overflow: hidden;
+  border-radius: 20px;
   justify-content: center;
   align-content: center;
 }
-.principal .card:hover, .principal .card-1:hover, .principal .card-2:hover, .principal .card-3:hover, .principal .card-4:hover, .principal .card-5:hover, .principal .card-6:hover {
-  transform: scale(1.05);
-}
-.principal .card:hover .card-body, .principal .card-1:hover .card-body, .principal .card-2:hover .card-body, .principal .card-3:hover .card-body, .principal .card-4:hover .card-body, .principal .card-5:hover .card-body, .principal .card-6:hover .card-body {
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s all ease-in-out;
-  background-color: rgba(65, 66, 66, 0.568627451);
-  color: blanchedalmond;
-}
-.principal .card, .principal .card-1, .principal .card-2, .principal .card-3, .principal .card-4, .principal .card-5, .principal .card-6 {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  background-image: url("/img/menu.jpg");
-}
-.principal .card .card-title::after, .principal .card-1 .card-title::after, .principal .card-2 .card-title::after, .principal .card-3 .card-title::after, .principal .card-4 .card-title::after, .principal .card-5 .card-title::after, .principal .card-6 .card-title::after {
-  content: "Pollo al Curry";
-  font-weight: bold;
+.principal .card-text p {
+  padding-top: 20px;
 }
 
 /*footer*/
@@ -279,6 +476,9 @@ footer {
   justify-content: space-around;
   margin-top: 50px;
   background-color: rgb(20, 37, 37);
+}
+footer div {
+  flex-wrap: wrap;
 }
 footer .foo_text {
   color: blanchedalmond;

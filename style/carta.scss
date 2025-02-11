@@ -1,346 +1,377 @@
-@mixin letraMarca{
-    font-family: "Henny Penny", serif;
-    font-weight: 400;
-    font-size:45px ;    
+@mixin letraMarca {
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 45px;
 }
 
 @mixin letraTextos {
-    font-family: "new-spirit,serif";
-    
+  font-family: "new-spirit,serif";
 }
-body{
-    filter: sepia(100px);
-    background-color: rgba(47, 79, 79, 0.488);
+
+body {
+  filter: sepia(100px);
+  background-color: rgba(47, 79, 79, 0.488);
 }
-header{
-   /*  background-image: url("/img/manipulation-4412444_1280.jpg");
+header {
+  /*  background-image: url("/img/manipulation-4412444_1280.jpg");
     background-color: 0.2;
     background-size: cover;
     background-repeat: no-repeat; */
-    width: 100vw;
-    height: 30vh;
-   
-    nav{
-       background-color:  darkslategrey;
-    }
-       .navbar-toggler{
-        color:blanchedalmond;
-        background-color: blanchedalmond;
-       }
+  width: 100vw;
+  height: 30vh;
 
-       
-    }
-    button{
-        color:  blanchedalmond;
-    }
-
-
-    h3{
-        position: relative;
-        top: 50px;
-        font-size:50px;
-        @include letraMarca();
-        color: #667f61;
-        animation: animacionH3 5s ease;
-        font-style: normal;
-        font-weight: 900;
-    }
-    @keyframes animacion{
-        0%{
-            transform: translateY(-100px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes animacionH3{
-        0%{
-            transform: translateX(-100px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(50px) translateY(-30px);
-            opacity: 1;
-        }
-    }
-
-    h1{
-        animation:  animacion 5s;
-        position: relative;
-        top: 30%;
-        color: #667f61; 
-        font-family: "new-spirit",serif;
-        text-shadow: 1px 2px #603008;
-        font-size: 2.5rem;
-        font-weight: 400;
-        text-align: center;
-        text-transform: uppercase;
-        
-      }
-      .nav-link{
-        color:  blanchedalmond !important;
-       }
-       .offcanvas{
-        margin-left: 20px;
-       }
-
-      .offcanvas-body{
-        background-color:darkslategrey;
-        padding-left: 100px;
-    
-      }
-      .offcanvas-header{
-        margin-left: 50px;
-        height: 20%;
-       @include letraTextos();
-       font-size: 20px;
-      }
-    
-
-    
-
-/* h1 {
-    color: #343a40;
-    font-weight: bold;
-} */
-@mixin letraTextos {
-    font-family: "new-spirit,serif";
-    
+  nav {
+    background-color: darkslategrey;
+  }
+  .navbar-toggler {
+    color: blanchedalmond;
+    background-color: blanchedalmond;
+  }
+}
+button {
+  color: blanchedalmond;
 }
 
+h3 {
+  position: relative;
+  top: 50px;
+  font-size: 50px;
+  @include letraMarca();
+  color: #667f61;
+  animation: animacionH3 5s ease;
+  font-style: normal;
+  font-weight: 900;
+}
+@keyframes animacion {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+@keyframes animacionH3 {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(50px) translateY(-30px);
+    opacity: 1;
+  }
+}
+
+h1 {
+  @include letraTextos();
+  animation: animacion 5s;
+  position: relative;
+  top: 30%;
+  color: #667f61;
+  text-shadow: 1px 2px #603008;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nav-link {
+  color: blanchedalmond !important;
+}
+.offcanvas {
+  margin-left: 20px;
+}
+
+.offcanvas-body {
+  background-color: darkslategrey;
+  padding-left: 100px;
+}
+.offcanvas-header {
+  margin-left: 50px;
+  height: 20%;
+  @include letraTextos();
+  font-size: 20px;
+}
+
+h2 {
+  @include letraTextos();
+  color: #343a40;
+  font-weight: bold;
+  text-shadow: 3px 3px#608177ba;
+  letter-spacing: 2px;
+  &::first-letter {
+    font-size: 50px;
+  }
+}
+
+/* div del icon plato */
+
+.plato {
+  width: 100%;
+  height: 10%;
+}
+.plato img {
+  mix-blend-mode: multiply;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  animation: moverPlato 5s infinite;
+  margin: 10px;
+}
+@keyframes moverPlato {
+  0% {
+    transform: translatex(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translatex(1000px);
+    opacity: 0;
+  }
+}
 /*cards entrenates*/
-$imagenes:(
-    "menu (1).jpg",
-    "menu (6).jpg",
-    "menu (4).jpg",
-    "menu (5).jpg",
-    "caption (8).jpg",
-    "menu.jpg",
-);
-$titulos:(
-    "Milhojas de Foie",
-    "Croquetas de Jamón",
-    "Focaccia de Verduras",
-    "Ensaladilla del mar con Hummus de Garbanzos",
-    "Caja de Maririscos Frescos",
-    "Pollo al Curry",
-);
 
-
-.container{
-
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .card {
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    margin: 10px;
-    
-    h5{
-        color:  rgb(251, 239, 222);
-        @include letraTextos();
-        font-weight: 900;
-        font-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+
+  h5 {
+    color: rgb(251, 239, 222);
+    @include letraTextos();
+    font-weight: 900;
+    font-size: 35px;
+  }
+}
+.card-body {
+  visibility: hidden;
+  width: 0px;
+  height: 100px;
+}
+
+.card:hover .card-body {
+  font-weight: 600;
+  align-content: center;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+
+  //transition: all 1s ease-out;
+  transition: 0.5s all ease-in-out;
+  background-color: #41424291;
+  color: blanchedalmond;
+}
+$imagenes: (
+  "menu (1).jpg",
+  "menu (6).jpg",
+  "menu (4).jpg",
+  "menu (5).jpg",
+  "caption (8).jpg",
+  "menu.jpg",
+  "postre1.jpg",
+  "postre2.webp",
+  "postre3.jpg"
+);
+$titulos: (
+  "Milhojas de Foie",
+  "Croquetas de Jamón",
+  "Focaccia de Verduras",
+  "Ensaladilla del mar con Hummus de Garbanzos",
+  "Caja de Maririscos Frescos",
+  "Pollo al Curry",
+  "Torrija a la miel",
+  "Natilla de merengue",
+  "Tarta de queso"
+
+);
+
+@for $i from 1 through 9 {
+  .card-#{$i} {
+    @extend .card;
+    background-image: url("/img/#{nth($imagenes, $i)}");
+
+    .card-title::after {
+      content: "#{nth($titulos, $i)}";
+      font-weight: bold;
     }
-   
+  }
 }
-.card-body{
-    visibility: hidden;
-    width: 0px;
-    height: 100px;
-    
-   
-}
-
-.card:hover .card-body{ 
-    font-weight: 600;   
-    align-content: center;
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-
-    //transition: all 1s ease-out;
-    transition: 0.5s all ease-in-out;
-    background-color: #41424291;
-    color:  blanchedalmond;
-}
-
-
-@for $i from 1 through 6 {
-    .card-#{$i} {
-        @extend .card;
-        background-image: url("/img/#{nth($imagenes, $i)}");
-        
-        .card-title::after {
-            content: "#{nth($titulos, $i)}";
-            font-weight: bold;
-        }
-    }
-}
-
-
-
-
 
 /*botom xa ver alergenos falta crearlos*/
 .btn-primary {
-    background-color: #007bff;
-    border: none;
+  background-color: #007bff;
+  border: none;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Estilos para los alérgenos */
 .alergenos {
-    text-align: center;
-    font-size: 0.9rem;
-    color:  #144a4a;
-    font-weight: bold;
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: #ebf0f67c;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #144a4a;
+  font-weight: bold;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #ebf0f67c;
 }
 
 /* media query pantalla pequeña */
-@media (max-width: 767.98px) { 
-    div[class^="row"] {
-       height:100%;
-    }
+@media (max-width: 767.98px) {
+  div[class^="row"] {
+    height: 100%;
+    width: 100%;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*principal*/
 
-@mixin estiloCard{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+@mixin estiloCard {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
-.principal{
-    
-    justify-content: center;
-  
-    h4{
-        color: #e1ebe8;
-        @include letraTextos();
-        font-weight: 900;
-        font-size: 35px;
-        background-color: #134237;
-    }
+ .principal {
+  justify-content: center; 
+  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 
-    img:hover{
-        width: 100%;
-        transition: 0.5s all ease-in-out;
+  h4 {
+    filter: drop-shadow(2px 2px 2px #78eb35);
+    letter-spacing: 2px;
+    color: #e1ebe8;
+    @include letraTextos();
+    font-weight: 900;
+    font-size: 35px;
+
+    &::first-letter {
+      font-size: 50px;
     }
- 
-    .card-text{
-        color: #e7f0ee;
-        position:static;
-       
-        //top: 80px;
-        mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.328));
-        left: 0px;
-        background-color: #134237;
-        overflow: hidden;
+  }
+
+
+  /*imagenes platos principales*/
+
+  $principal_img: (
+    "menu.jpg",
+    "caption (1).jpg",
+    "caption (2).jpg",
+    "caption (3).jpg",
+    "caption (5).jpg",
+    "caption (4).jpg",
+    "caption (6).jpg",
+    "patolakeado.jpg"
+  );
+
+  @for $i from 1 through length($principal_img) {
+    .p_img#{$i} {
+        display: flex;
+      position: relative;
+    
+        flex-wrap: wrap;
         justify-content: center;
-        align-content: center;
-        
+        width: 400px;
+        height: 400px;
+      background-image: url("/img/#{nth($principal_img, $i)}");
+      background-repeat: no-repeat;
+      background-size: 250px;
+      background-position: center; // Ajusta la altura según necesidad
+      border-radius: 10px;
+      transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+
+      &:hover {
+        background-size: cover;
+        transform: scale(1.1);
+        border-radius: 600px;
+      }
     }
+  }
+  .card-text {
+   
+    color: #e7f0ee;
+    position: static;
+    height: fit-content;
+    filter:drop-shadow(2px 2px 2px #000); 
+    background-color: rgba(128, 128, 128, 0.376);
+    left: 0px;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
     
-   .alergenos{
-        @extend .alergenos;
-       
-    }
- 
-    .card:hover {
-        transform: scale(1.05);
-    }
-    .card:hover .card-body {
-        visibility: visible;
-        width: 100%;
-        height: 100%;
-        transition: 0.5s all ease-in-out;
-        background-color: #41424291;
-        color:  blanchedalmond;
-    }
-    .card {
-        @include estiloCard();
-        background-image: url("/img/menu.jpg");
-        .card-title::after {
-            content: "Pollo al Curry";
-            font-weight: bold;
-        }
-    
-   }
+  }
+  
+  .card-text p {
+    padding-top: 20px;
+  }
+
+
+
 }
+
+
+
+
+
+
+
 
 /*footer*/
-footer{
-    position: sticky;/*para que se quede fijo en la pantalla al hacer scroll*/
-    bottom: 0px;
+footer {
+  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
+  bottom: 0px;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: rgb(20, 37, 37);
+ div{
+    flex-wrap: wrap;
+ }
+  .foo_text {
+    color: blanchedalmond;
+    display: flex;
     justify-content: space-around;
-    margin-top: 50px;
-    background-color: rgb(20, 37, 37);
 
-    .foo_text{
-        color:  blanchedalmond;
-        display: flex;
-        justify-content: space-around;
-        
-        p{
-            margin: 10px;
-            font-size: 20px;
-        }
+    p {
+      margin: 10px;
+      font-size: 20px;
+    }
+  }
 
-    }
-    
-    .foo_icons i{
-            color: bisque;
-            margin: 10px;
-            font-size: 25px;
-    
-    }
+  .foo_icons i {
+    color: bisque;
+    margin: 10px;
+    font-size: 25px;
+  }
 }

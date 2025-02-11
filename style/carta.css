@@ -203,7 +203,7 @@ h1 {
 }
 
 /* Estilos para los alérgenos */
-.alergenos {
+.alergenos, .principal .alergenos {
   text-align: center;
   font-size: 0.9rem;
   color: #144a4a;
@@ -237,11 +237,39 @@ h1 {
 .principal .card-text {
   color: #e7f0ee;
   position: static;
+  -webkit-mask: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.328));
+          mask: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.328));
   left: 0px;
   background-color: #134237;
   overflow: hidden;
   justify-content: center;
   align-content: center;
+}
+.principal .card:hover, .principal .card-1:hover, .principal .card-2:hover, .principal .card-3:hover, .principal .card-4:hover, .principal .card-5:hover, .principal .card-6:hover {
+  transform: scale(1.05);
+}
+.principal .card:hover .card-body, .principal .card-1:hover .card-body, .principal .card-2:hover .card-body, .principal .card-3:hover .card-body, .principal .card-4:hover .card-body, .principal .card-5:hover .card-body, .principal .card-6:hover .card-body {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s all ease-in-out;
+  background-color: rgba(65, 66, 66, 0.568627451);
+  color: blanchedalmond;
+}
+.principal .card, .principal .card-1, .principal .card-2, .principal .card-3, .principal .card-4, .principal .card-5, .principal .card-6 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  background-image: url("/img/menu.jpg");
+}
+.principal .card .card-title::after, .principal .card-1 .card-title::after, .principal .card-2 .card-title::after, .principal .card-3 .card-title::after, .principal .card-4 .card-title::after, .principal .card-5 .card-title::after, .principal .card-6 .card-title::after {
+  content: "Pollo al Curry";
+  font-weight: bold;
 }
 
 /*footer*/

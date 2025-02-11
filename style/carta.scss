@@ -260,7 +260,7 @@ $titulos:(
     transition: transform 0.3s ease-in-out;
 }
 .principal{
-    //@extend .card;
+    
     justify-content: center;
   
     h4{
@@ -275,20 +275,46 @@ $titulos:(
         width: 100%;
         transition: 0.5s all ease-in-out;
     }
+ 
     .card-text{
         color: #e7f0ee;
         position:static;
+       
         //top: 80px;
+        mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.328));
         left: 0px;
         background-color: #134237;
-        ;
         overflow: hidden;
         justify-content: center;
         align-content: center;
+        
     }
     
-   
-   
+   .alergenos{
+        @extend .alergenos;
+       
+    }
+ 
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card:hover .card-body {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s all ease-in-out;
+        background-color: #41424291;
+        color:  blanchedalmond;
+    }
+    .card {
+        @include estiloCard();
+        background-image: url("/img/menu.jpg");
+        .card-title::after {
+            content: "Pollo al Curry";
+            font-weight: bold;
+        }
+    
+   }
 }
 
 /*footer*/

@@ -1,6 +1,6 @@
 body {
   filter: sepia(100px);
-  background-color: darkslategrey;
+  background-color: rgba(24, 41, 41, 0.9764705882);
 }
 
 header {
@@ -29,6 +29,7 @@ header h3 {
   font-weight: 400;
   font-size: 45px;
   color: #667f61;
+  text-shadow: 1px 2px #603008;
   animation: animacionH3 5s ease;
   font-style: normal;
   font-weight: 900;
@@ -94,7 +95,7 @@ section {
 
 .card {
   border-radius: 20px;
-  background-color: darkslategrey;
+  background-color: rgba(24, 41, 41, 0.9764705882);
   box-shadow: 2px 5px blanchedalmond;
   margin-top: 30px;
   margin-left: 8px;
@@ -122,7 +123,7 @@ section {
   transition: 0.2s;
 }
 .card .btn {
-  background-color: rgb(14, 29, 29);
+  background-color: #0e1d1d;
   color: blanchedalmond;
 }
 
@@ -131,7 +132,7 @@ footer {
   bottom: 0px;
   justify-content: space-around;
   margin-top: 50px;
-  background-color: rgb(20, 37, 37);
+  background-color: #142525;
 }
 footer .foo_text {
   color: blanchedalmond;
@@ -143,7 +144,7 @@ footer .foo_text p {
   font-size: 20px;
 }
 footer .foo_icons i {
-  color: bisque;
+  color: blanchedalmond;
   margin: 10px;
   font-size: 25px;
 }/*# sourceMappingURL=style.css.map */

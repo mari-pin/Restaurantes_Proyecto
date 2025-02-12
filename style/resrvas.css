@@ -1,6 +1,6 @@
 body {
   filter: sepia(100px);
-  background-color: darkslategrey;
+  background-color: rgba(24, 41, 41, 0.9764705882);
 }
 
 header {
@@ -29,6 +29,7 @@ header h3 {
   font-weight: 400;
   font-size: 45px;
   color: #667f61;
+  text-shadow: 1px 2px #603008;
   animation: animacionH3 5s ease;
   font-style: normal;
   font-weight: 900;
@@ -72,7 +73,7 @@ header .offcanvas {
   margin-left: 20px;
 }
 header .offcanvas-body {
-  background-color: darkslategrey;
+  background-color: rgba(24, 41, 41, 0.9764705882);
   padding-left: 100px;
 }
 header .offcanvas-header {
@@ -124,7 +125,7 @@ main {
   text-align: center;
 }
 .container .destino {
-  color: darkslategrey;
+  color: rgba(24, 41, 41, 0.9764705882);
   font-weight: 900;
   font-family: "Henny Penny", serif;
 }
@@ -137,7 +138,7 @@ main {
   height: 80%;
   font-weight: 900;
   /*  overflow:scroll;
-   scrollbar-color: darkslategrey blanchedalmond; */
+   scrollbar-color:$color-oscuro $$text-color; */
   margin-top: 20px;
 }
 .container form input {
@@ -146,7 +147,7 @@ main {
   margin: 15px;
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid darkslategrey;
+  border: 2px solid rgba(24, 41, 41, 0.9764705882);
   background-color: transparent;
   border: none;
   color: darkslategrey;

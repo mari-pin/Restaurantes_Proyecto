@@ -7,9 +7,16 @@
 @mixin letraTextos {
   font-family: "new-spirit,serif";
 }
+
+//variables 
+$text-color: blanchedalmond;
+$color-oscuro:#182929f9;
+$color-background:darkslategrey;
+
+
 body {
   filter: sepia(100px);
-  background-color: darkslategrey;
+  background-color:$color-oscuro;
 }
 header {
   background-image: url("/img/manipulation-4412444_1280.jpg");
@@ -23,12 +30,12 @@ header {
     background-color: transparent;
 
     .navbar-toggler {
-      color: blanchedalmond;
-      background-color: blanchedalmond;
+      color: $text-color;
+      background-color: $text-color;
     }
   }
   button {
-    color: blanchedalmond;
+    color: $text-color;
   }
 
   h3 {
@@ -37,6 +44,7 @@ header {
     font-size: 50px;
     @include letraMarca();
     color: #667f61;
+    text-shadow: 1px 2px #603008;
     animation: animacionH3 5s ease;
     font-style: normal;
     font-weight: 900;
@@ -83,7 +91,7 @@ header {
   }
 
   .offcanvas-body {
-    background-color: darkslategrey;
+    background-color:$color-oscuro;
     padding-left: 100px;
   }
   .offcanvas-header {
@@ -102,7 +110,7 @@ footer{
     background-color: rgb(20, 37, 37);
 
     .foo_text{
-        color:  blanchedalmond;
+        color: $text-color;
         display: flex;
         justify-content: space-around;
         
@@ -129,7 +137,7 @@ main{
   padding: 20px;
   margin-top: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 blanchedalmond;
+  box-shadow: 0 0 10px 0 $text-color;
   width: 50%;
   height: 100%;
   margin-left: 25%;
@@ -139,7 +147,7 @@ main{
   text-align: center;
 
   .destino {
-    color: darkslategrey;
+    color:$color-oscuro;
     font-weight: 900;
     font-family: "Henny Penny", serif;
   }
@@ -153,7 +161,7 @@ main{
     height: 80%;
     font-weight: 900;
    /*  overflow:scroll;
-    scrollbar-color: darkslategrey blanchedalmond; */
+    scrollbar-color:$color-oscuro $$text-color; */
     margin-top: 20px;
     input {
       margin-top: 10px;
@@ -161,10 +169,10 @@ main{
       margin: 15px;
       padding: 10px;
       border-radius: 10px;
-      border:2px solid darkslategrey;
+      border:2px solid $color-oscuro;
       background-color: transparent;
       border: none;    
-      color:darkslategrey;
+      color:$color-background;
       @include letraTextos();
       font-size: 20px;
     }
@@ -174,7 +182,7 @@ main{
       border-radius: 10px;
       border: none;
       background-color: rgb(14, 29, 29);
-      color: blanchedalmond;
+      color: $text-color;
       @include letraTextos();
       font-size: 20px;
     }

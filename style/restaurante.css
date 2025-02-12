@@ -1,0 +1,299 @@
+body {
+  filter: grayscale(0.5);
+  background-color: rgba(47, 79, 79, 0.9843137255);
+}
+
+header {
+  width: 100vw;
+  height: 30vh;
+}
+header nav {
+  background-color: rgba(76, 97, 97, 0.9764705882);
+}
+header .navbar-toggler {
+  color: blanchedalmond;
+  background-color: blanchedalmond;
+}
+
+button {
+  color: blanchedalmond;
+}
+
+h1 {
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 55px;
+  color: blanchedalmond;
+  text-shadow: 1px 5px #667f61;
+  animation: animacionH1 5s ease;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  position: relative;
+  top: 50px;
+  font-size: 55px;
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 55px;
+  color: rgba(255, 235, 205, 0.97);
+  text-shadow: 1px 5px #667f61;
+  animation: animacionH3 5s ease;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@keyframes animacionH3 {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.nav-link {
+  color: blanchedalmond !important;
+}
+
+.offcanvas {
+  margin-left: 20px;
+}
+
+.offcanvas-body {
+  background-color: rgba(76, 97, 97, 0.9764705882);
+  padding-left: 100px;
+}
+
+.offcanvas-header {
+  margin-left: 50px;
+  height: 20%;
+  font-family: "new-spirit,serif";
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "new-spirit,serif";
+  background-color: rgba(128, 128, 128, 0.376);
+  border-radius: 20px;
+  color: blanchedalmond;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px rgba(96, 129, 119, 0.7294117647);
+  letter-spacing: 2px;
+}
+h2::first-letter {
+  font-size: 50px;
+}
+
+.container {
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(96, 129, 119, 0.7294117647);
+}
+
+.imagenes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.imagenes .img1 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/portada.jpg");
+}
+.imagenes .img2 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/atolye.jpg");
+}
+.imagenes .img3 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/caption.jpg");
+}
+.imagenes .img4 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/garden-sofa.jpg");
+}
+.imagenes .img5 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/knife-showcase.jpg");
+}
+.imagenes .img6 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/rest_ras1.jpeg");
+}
+.imagenes .img7 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/rest_rascacielos2.jpg");
+}
+.imagenes .img8 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/tamoka-dubai.jpg");
+}
+.imagenes .img9 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/tamoka_-gallery-08-620c1da8cf6bd.jpg");
+}
+.imagenes .img10 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
+}
+.imagenes .img11 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/wine-cellar-side.jpg");
+}
+.imagenes .img12 {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/wine-cellar.jpg");
+}
+
+/*hace los hover de las imagenes*/
+.imagenes .img1:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img2:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img3:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img4:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img5:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img6:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img7:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img8:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img9:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img10:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img11:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+.imagenes .img12:hover {
+  width: 800px;
+  transition: linear 0.5s;
+}
+
+/*footer*/
+footer {
+  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
+  bottom: 0px;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: rgba(76, 97, 97, 0.9764705882);
+}
+footer div {
+  flex-wrap: wrap;
+}
+footer .foo_text {
+  color: blanchedalmond;
+  display: flex;
+  justify-content: space-around;
+}
+footer .foo_text p {
+  margin: 10px;
+  font-size: 20px;
+}
+footer .foo_icons i {
+  color: blanchedalmond;
+  margin: 10px;
+  font-size: 25px;
+}/*# sourceMappingURL=restaurante.css.map */

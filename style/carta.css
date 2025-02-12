@@ -1,19 +1,15 @@
 @charset "UTF-8";
 body {
-  filter: sepia(100px);
-  background-color: rgba(47, 79, 79, 0.488);
+  filter: grayscale(0.5);
+  background-color: rgba(47, 79, 79, 0.9843137255);
 }
 
 header {
-  /*  background-image: url("/img/manipulation-4412444_1280.jpg");
-    background-color: 0.2;
-    background-size: cover;
-    background-repeat: no-repeat; */
   width: 100vw;
   height: 30vh;
 }
 header nav {
-  background-color: darkslategrey;
+  background-color: rgba(24, 41, 41, 0.9764705882);
 }
 header .navbar-toggler {
   color: blanchedalmond;
@@ -27,17 +23,18 @@ button {
 h3 {
   position: relative;
   top: 50px;
-  font-size: 50px;
+  font-size: 55px;
   font-family: "Henny Penny", serif;
   font-weight: 400;
-  font-size: 45px;
-  color: #667f61;
+  font-size: 55px;
+  color: rgba(255, 235, 205, 0.97);
+  text-shadow: 1px 5px #667f61;
   animation: animacionH3 5s ease;
   font-style: normal;
   font-weight: 900;
 }
 
-@keyframes animacion {
+/* @keyframes animacion {
   0% {
     transform: translateY(-100px);
     opacity: 0;
@@ -46,30 +43,30 @@ h3 {
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 @keyframes animacionH3 {
   0% {
-    transform: translateX(-100px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   100% {
-    transform: translateX(50px) translateY(-30px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-h1 {
-  font-family: "new-spirit,serif";
+/* h1 {
+  @include letraTextos();
   animation: animacion 5s;
   position: relative;
   top: 30%;
-  color: #667f61;
-  text-shadow: 1px 2px #603008;
+  //background-color: rgb(128, 128, 128);
+  //color: rgb(128, 128, 128);
+ // text-shadow: 1px 2px blanchedalmond;
   font-size: 2.5rem;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
-}
-
+} */
 .nav-link {
   color: blanchedalmond !important;
 }
@@ -79,7 +76,7 @@ h1 {
 }
 
 .offcanvas-body {
-  background-color: darkslategrey;
+  background-color: rgba(24, 41, 41, 0.9764705882);
   padding-left: 100px;
 }
 
@@ -92,8 +89,11 @@ h1 {
 
 h2 {
   font-family: "new-spirit,serif";
-  color: #343a40;
+  background-color: rgba(128, 128, 128, 0.376);
+  border-radius: 20px;
+  color: blanchedalmond;
   font-weight: bold;
+  letter-spacing: 3px;
   text-shadow: 3px 3px rgba(96, 129, 119, 0.7294117647);
   letter-spacing: 2px;
 }
@@ -125,7 +125,7 @@ h2::first-letter {
   }
   50% {
     transform: translatex(0px);
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
     transform: translatex(1000px);
@@ -159,9 +159,9 @@ h2::first-letter {
   margin: 10px;
 }
 .card h5, .card-9 h5, .card-8 h5, .card-7 h5, .card-6 h5, .card-5 h5, .card-4 h5, .card-3 h5, .card-2 h5, .card-1 h5 {
-  color: rgb(251, 239, 222);
+  color: blanchedalmond;
   font-family: "new-spirit,serif";
-  font-weight: 900;
+  font-weight: 600;
   font-size: 35px;
 }
 
@@ -291,12 +291,12 @@ h2::first-letter {
   /*imagenes platos principales*/
 }
 .principal h4 {
-  filter: drop-shadow(2px 2px 2px #78eb35);
   letter-spacing: 2px;
   color: #e1ebe8;
   font-family: "new-spirit,serif";
-  font-weight: 900;
+  font-weight: 200;
   font-size: 35px;
+  filter: saturate(200%);
 }
 .principal h4::first-letter {
   font-size: 50px;
@@ -454,13 +454,12 @@ h2::first-letter {
   border-radius: 600px;
 }
 .principal .card-text {
-  color: #e7f0ee;
+  color: blanchedalmond;
   position: static;
   height: -moz-fit-content;
   height: fit-content;
-  filter: drop-shadow(2px 2px 2px #000);
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5058823529));
   background-color: rgba(128, 128, 128, 0.376);
-  left: 0px;
   border-radius: 20px;
   justify-content: center;
   align-content: center;
@@ -475,7 +474,7 @@ footer {
   bottom: 0px;
   justify-content: space-around;
   margin-top: 50px;
-  background-color: rgb(20, 37, 37);
+  background-color: rgba(24, 41, 41, 0.9764705882);
 }
 footer div {
   flex-wrap: wrap;
@@ -490,7 +489,7 @@ footer .foo_text p {
   font-size: 20px;
 }
 footer .foo_icons i {
-  color: bisque;
+  color: blanchedalmond;
   margin: 10px;
   font-size: 25px;
 }/*# sourceMappingURL=carta.css.map */

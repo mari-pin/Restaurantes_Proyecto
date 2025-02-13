@@ -95,6 +95,18 @@ h2::first-letter {
   box-shadow: 5px 5px 5px 5px rgba(96, 129, 119, 0.7294117647);
 }
 
+h4 {
+  letter-spacing: 2px;
+  color: #e1ebe8;
+  font-family: "new-spirit,serif";
+  font-weight: 200;
+  font-size: 35px;
+  filter: saturate(200%);
+}
+h4::first-letter {
+  font-size: 50px;
+}
+
 .imagenes {
   width: 100%;
   height: 100%;
@@ -102,6 +114,9 @@ h2::first-letter {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(128, 128, 128, 0.703);
 }
 .imagenes .img1 {
   width: 100px;
@@ -110,7 +125,8 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/portada.jpg");
+  width: 500px;
+  background-image: url("/img/portada.jpg");
 }
 .imagenes .img2 {
   width: 100px;
@@ -119,7 +135,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/atolye.jpg");
+  background-image: url("/img/atolye.jpg");
 }
 .imagenes .img3 {
   width: 100px;
@@ -128,7 +144,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/caption.jpg");
+  background-image: url("/img/caption.jpg");
 }
 .imagenes .img4 {
   width: 100px;
@@ -137,7 +153,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/garden-sofa.jpg");
+  background-image: url("/img/garden-sofa.jpg");
 }
 .imagenes .img5 {
   width: 100px;
@@ -155,7 +171,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/rest_ras1.jpeg");
+  background-image: url("/img/rest_rascacielos2.jpg");
 }
 .imagenes .img7 {
   width: 100px;
@@ -164,7 +180,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/rest_rascacielos2.jpg");
+  background-image: url("/img/rest_rascacielos1.jpg");
 }
 .imagenes .img8 {
   width: 100px;
@@ -191,6 +207,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 500px;
   background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
 }
 .imagenes .img11 {
@@ -200,6 +217,7 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 300px;
   background-image: url("/img/wine-cellar-side.jpg");
 }
 .imagenes .img12 {
@@ -209,7 +227,8 @@ h2::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/wine-cellar.jpg");
+  background-image: url("/img/bodega_cavas.jpg");
+  width: 300px;
 }
 
 /*hace los hover de las imagenes*/
@@ -222,6 +241,11 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img1:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .imagenes .img2:hover {
   width: 1000px;
   transition: linear 0.5s;
@@ -229,6 +253,11 @@ h2::first-letter {
 .imagenes .img2:hover .texto_img {
   width: 50%;
   border-radius: 10px;
+}
+
+.imagenes:hover .img2:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .imagenes .img3:hover {
@@ -240,6 +269,11 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img3:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .imagenes .img4:hover {
   width: 1000px;
   transition: linear 0.5s;
@@ -247,6 +281,11 @@ h2::first-letter {
 .imagenes .img4:hover .texto_img {
   width: 50%;
   border-radius: 10px;
+}
+
+.imagenes:hover .img4:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .imagenes .img5:hover {
@@ -258,6 +297,11 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img5:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .imagenes .img6:hover {
   width: 1000px;
   transition: linear 0.5s;
@@ -265,6 +309,11 @@ h2::first-letter {
 .imagenes .img6:hover .texto_img {
   width: 50%;
   border-radius: 10px;
+}
+
+.imagenes:hover .img6:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .imagenes .img7:hover {
@@ -276,6 +325,11 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img7:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .imagenes .img8:hover {
   width: 1000px;
   transition: linear 0.5s;
@@ -283,6 +337,11 @@ h2::first-letter {
 .imagenes .img8:hover .texto_img {
   width: 50%;
   border-radius: 10px;
+}
+
+.imagenes:hover .img8:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .imagenes .img9:hover {
@@ -294,6 +353,11 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img9:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .imagenes .img10:hover {
   width: 1000px;
   transition: linear 0.5s;
@@ -301,6 +365,11 @@ h2::first-letter {
 .imagenes .img10:hover .texto_img {
   width: 50%;
   border-radius: 10px;
+}
+
+.imagenes:hover .img10:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .imagenes .img11:hover {
@@ -312,6 +381,11 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img11:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .imagenes .img12:hover {
   width: 1000px;
   transition: linear 0.5s;
@@ -321,7 +395,13 @@ h2::first-letter {
   border-radius: 10px;
 }
 
+.imagenes:hover .img12:not(:hover) .texto_img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .texto_img {
+  padding: 10px;
   background-color: rgba(128, 128, 128, 0.784);
   width: 80%;
   position: relative;
@@ -340,188 +420,206 @@ h2::first-letter {
   font-size: clamp(15px, 2vw, 10px);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 768px) {
   .imagenes {
+    flex-direction: column;
     position: relative;
     text-align: center;
     justify-content: center;
     align-content: center;
     overflow: hidden;
   }
-  .texto_img {
-    width: 80%;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    overflow: hidden;
+  .imagenes .img1 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
   }
-  .imagenes .img1:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes .img2 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img3 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img4 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img5 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img6 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img7 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img8 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img9 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img10 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img11 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .imagenes .img12 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
   }
   .imagenes .img1:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img2:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img1:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img2:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img3:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img2:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img3:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img4:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img3:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img4:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img5:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img4:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img5:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img6:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img5:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img6:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img7:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img6:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img7:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img8:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img7:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img8:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img9:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img8:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img9:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img10:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img9:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img10:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img11:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img10:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img11:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
   }
-  .imagenes .img12:hover {
-    width: 1000px;
-    transition: linear 0.5s;
-    justify-content: center;
-    align-content: flex-start;
-    overflow: hidden;
+  .imagenes:hover .img11:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
   .imagenes .img12:hover .texto_img {
     position: fixed;
     left: 0px;
     text-align: center;
     width: 80%;
-    transform: translateX(10px);
+    transform: translateX(50px);
+  }
+  .imagenes:hover .img12:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 /*footer*/

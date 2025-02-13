@@ -1,322 +1,300 @@
 @mixin letraMarca {
-    font-family: "Henny Penny", serif;
-    font-weight: 400;
-    font-size: 55px;
-  }
-  
-  @mixin letraTextos {
-    font-family: "new-spirit,serif";
-  }
-  
-  
-  //variables 
-  $text-color: blanchedalmond;
-  $color-oscuro:#4c6161f9;
-  $color-background:#2f4f4f;
-  
-  
-  body {
-    filter:grayscale(0.5);
-    background-color:#2f4f4ffb;
-  }
-  header {
-    width: 100vw;
-    height: 30vh;
-  
-    nav {
-      background-color:$color-oscuro;
-    }
-    .navbar-toggler {
-      color: $text-color;
-      background-color: $text-color;
-    }
-  }
-  button {
-    color: $text-color;
-  }
-  h1{
-    @include letraMarca();
-    color: $text-color;
-    text-shadow: 1px 5px  #667f61; //
-    animation: animacionH1 5s ease;
-    font-style: normal;
-    font-weight: 500;
-  }
-  
-  h3 {
-    position: relative;
-    top: 50px;
-    font-size: 55px;
-    @include letraMarca();
-    color: rgba(255, 235, 205, 0.97);
-    text-shadow: 1px 5px  #667f61; //
-    animation: animacionH3 5s ease;
-    font-style: normal;
-    font-weight: 900;
-  }
-  @keyframes animacionH3 {
-    0% {
-      transform: translateY(-100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-  }  
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-size: 55px;
+}
 
-  
+@mixin letraTextos {
+  font-family: "new-spirit,serif";
+}
+
+//variables
+$text-color: blanchedalmond;
+$color-oscuro: #4c6161f9;
+$color-background: #2f4f4f;
+
+body {
+  filter: grayscale(0.5);
+  background-color: #2f4f4ffb;
+}
+header {
+  width: 100vw;
+  height: 30vh;
+
+  nav {
+    background-color: $color-oscuro;
+  }
+  .navbar-toggler {
+    color: $text-color;
+    background-color: $text-color;
+  }
+}
+button {
+  color: $text-color;
+}
+h1 {
+  @include letraMarca();
+  color: $text-color;
+  text-shadow: 1px 5px #667f61; //
+  animation: animacionH1 5s ease;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  position: relative;
+  top: 50px;
+  font-size: 55px;
+  @include letraMarca();
+  color: rgba(255, 235, 205, 0.97);
+  text-shadow: 1px 5px #667f61; //
+  animation: animacionH3 5s ease;
+  font-style: normal;
+  font-weight: 900;
+}
+@keyframes animacionH3 {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .nav-link {
-    color: $text-color !important;
-  }
-  .offcanvas {
-    margin-left: 20px;
-  }
-  
-  .offcanvas-body {
-    background-color:$color-oscuro;
-    padding-left: 100px;
-  }
-  .offcanvas-header {
-    margin-left: 50px;
-    height: 20%;
-    @include letraTextos();
-    font-size: 20px;
-  }
-  
-  h2 {
-    @include letraTextos();
-    background-color: rgba(128, 128, 128, 0.376); 
-    border-radius: 20px;
-    color: $text-color;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-shadow: 3px 3px#608177ba;
-    letter-spacing: 2px;
-    &::first-letter {
-      font-size: 50px;
-    }
-  }
+  color: $text-color !important;
+}
+.offcanvas {
+  margin-left: 20px;
+}
 
-  
+.offcanvas-body {
+  background-color: $color-oscuro;
+  padding-left: 100px;
+}
+.offcanvas-header {
+  margin-left: 50px;
+  height: 20%;
+  @include letraTextos();
+  font-size: 20px;
+}
+
+h2 {
+  @include letraTextos();
+  background-color: rgba(128, 128, 128, 0.376);
+  border-radius: 20px;
+  color: $text-color;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px#608177ba;
+  letter-spacing: 2px;
+  &::first-letter {
+    font-size: 50px;
+  }
+}
+
 .container {
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px 5px #608177ba;
+}
+
+@mixin imagenes {
+  width: 100px;
+  height: 500px;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin imgHover {
+  width: 1000px;
+  transition: linear 0.5s;
+}
+@mixin backgroundTextosImg {
+  background-color: rgba(128, 128, 128, 0.784);
+}
+h4 {
   
-    border-radius: 20px;
-    margin-top: 50px;
-    padding: 20px;
-    box-shadow: 5px 5px 5px 5px #608177ba;
+  letter-spacing: 2px;
+  color: #e1ebe8;
+  @include letraTextos();
+  font-weight: 200;
+  font-size: 35px;
+  filter:saturate(200%);
+  &::first-letter {
+    font-size: 50px;
+  }
+}
+
+
+.imagenes {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ border-radius: 10px;
+ margin-bottom: 10px;
+  background-color: rgba(128, 128, 128, 0.703);
+
+  .img1 {
+    @include imagenes();
+    width: 500px;
+    background-image: url("/img/portada.jpg");
+  }
+  .img2 {
+    @include imagenes();
+    background-image: url("/img/atolye.jpg");
   }
 
-  @mixin imagenes{
-    width: 100px;
-    height: 500px;
-    gap: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-@mixin imgHover{
-    width: 1000px;
-    transition: linear 0.5s;
-    
-}
-@mixin backgroundTextosImg{
-    background-color: rgba(128, 128, 128, 0.784);
-}
+  .img3 {
+    @include imagenes();
+    background-image: url("/img/caption.jpg");
+  }
+  .img4 {
+    @include imagenes();
+    background-image: url("/img/garden-sofa.jpg");
+  }
 
-
-
-
-.imagenes{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    
-
-    .img1{
-       @include imagenes();
-        background-image: url("../img/portada.jpg");
-       
-
-    }
-    .img2{
-        @include imagenes();
-        background-image: url("../img/atolye.jpg");
-    }
-
-    .img3{
-        @include imagenes();
-        background-image: url("../img/caption.jpg");
-    }
-    .img4{
-        @include imagenes();
-        background-image: url("../img/garden-sofa.jpg");
-    }
-
-    .img5{
-        @include imagenes();
-        background-image: url("/img/knife-showcase.jpg");
-    }
-    .img6{
-        @include imagenes();
-        
-        background-image: url("/img/rest_ras1.jpeg");
-    }
-    .img7{
-        @include imagenes();
-        background-image: url("/img/rest_rascacielos2.jpg");
-    }
-    .img8{
-        @include imagenes();
-        background-image: url("/img/tamoka-dubai.jpg");
-    }
-    .img9{
-        @include imagenes();
-        background-image: url("/img/tamoka_-gallery-08-620c1da8cf6bd.jpg");
-    }
-    .img10{
-        @include imagenes();
-        background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
-    }
-    .img11{
-        @include imagenes();
-        background-image: url("/img/wine-cellar-side.jpg");
-
-}
-    .img12{
-        @include imagenes();
-        background-image: url("/img/wine-cellar.jpg");
-
-}
-
-
+  .img5 {
+    @include imagenes();
+    background-image: url("/img/knife-showcase.jpg");
+  }
+  .img6 {
+    @include imagenes();
+;
+    background-image: url("/img/rest_rascacielos2.jpg");
+  }
+  .img7 {
+    @include imagenes();
+    background-image: url("/img/rest_rascacielos1.jpg");
+  }
+  .img8 {
+    @include imagenes();
+    background-image: url("/img/tamoka-dubai.jpg");
+  }
+  .img9 {
+    @include imagenes();
+    background-image: url("/img/tamoka_-gallery-08-620c1da8cf6bd.jpg");
+  }
+  .img10 {
+    @include imagenes();
+    width: 500px;
+    background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
+  }
+  .img11 {
+    @include imagenes();
+    width: 300px;
+    background-image: url("/img/wine-cellar-side.jpg");
+  }
+  .img12 {
+    @include imagenes();
+    background-image: url("/img/bodega_cavas.jpg");
+    width: 300px;
+  }
+  
 }
 /*hace los hover de las imagenes*/
-$imagenes : img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
+$imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
 
-@each $img in $imagenes{
-    .imagenes .#{$img}:hover{
-        @include imgHover();
-        .texto_img{
-            width: 50%;
-            border-radius: 10px;
-        }
-       
-      
-      
+@each $img in $imagenes {
+  .imagenes .#{$img}:hover {
+    @include imgHover();
+    .texto_img {
+      width: 50%;
+      border-radius: 10px;
     }
- 
+  }
+  .imagenes:hover .#{$img}:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 }
-.texto_img{
-    background-color: rgba(128, 128, 128, 0.784);
-    width:80% ;
+.texto_img {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.784);
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  h5 {
+    color: $text-color;
+    @include letraTextos();
+    font-weight: 600;
+    font-size: clamp(20px, 2vw, 15px);
+  }
+
+  p {
+    color: $text-color;
+    @include letraTextos();
+    font-size: clamp(15px, 2vw, 10px);
+  }
+}
+
+ @media (min-width: 600px) and (max-width:768px) {
+  .imagenes {
+    flex-direction: column;
     position: relative;
-    overflow: hidden;
     text-align: center;
-    h5 {
-        color:$text-color;
-        @include letraTextos();
-        font-weight: 600;
-        font-size: clamp(20px, 2vw, 15px);
-      }
-
-      p{
-        color:$text-color;
-        @include letraTextos();
-        font-size: clamp(15px, 2vw, 10px);
-      }
-}
-
-
- 
- 
- 
-
-
-@media only screen and(max-width: 768px) {
-    .imagenes{
-      position: relative;
-        text-align: center;
-        justify-content: center;
-        align-content: center;
-        overflow: hidden;
-    }
-    .texto_img{
-       width: 80%;
-        text-align: center;
-        justify-content: center;
-        align-content: center;
-        overflow: hidden;
-   
-    }
-    @each $img in $imagenes{
-      .imagenes .#{$img}:hover{
-          @include imgHover();
-          justify-content: center;
-          align-content:flex-start;
-          overflow: hidden;
-          .texto_img{
-           position: fixed;
-           left: 0px;
-         // justify-items: center;
-           text-align: center;
-           width: 80%;
-           transform: translateX(10px);
-           // visibility: hidden;
-           
-              
-
-          }
-      
-        
-        
-      }
-   
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
   }
-    
-    
+  @each $img in $imagenes {
+    .imagenes .#{$img} {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  @each $img in $imagenes {
+    .imagenes .#{$img}:hover {
+      .texto_img {
+        position: fixed;
+        left: 0px;
+        text-align: center;
+        width: 80%;
+        transform: translateX(50px);
+      }
+    }
+    .imagenes:hover .#{$img}:not(:hover) .texto_img {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
 }
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-  /*footer*/
+/*footer*/
 footer {
-    position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
-    bottom: 0px;
+  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
+  bottom: 0px;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: $color-oscuro;
+  div {
+    flex-wrap: wrap;
+  }
+  .foo_text {
+    color: $text-color;
+    display: flex;
     justify-content: space-around;
-    margin-top: 50px;
-    background-color: $color-oscuro;
-   div{
-      flex-wrap: wrap;
-   }
-    .foo_text {
-      color: $text-color;
-      display: flex;
-      justify-content: space-around;
-  
-      p {
-        margin: 10px;
-        font-size: 20px;
-      }
-    }
-  
-    .foo_icons i {
-      color:$text-color;
+
+    p {
       margin: 10px;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
-  
+
+  .foo_icons i {
+    color: $text-color;
+    margin: 10px;
+    font-size: 25px;
+  }
+}

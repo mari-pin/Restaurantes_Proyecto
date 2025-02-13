@@ -1,149 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
   <link href="style/restaurante.css" rel="stylesheet">
   <title>Restaurante Dubai</title>
 </head>
+
 <body>
-    <header class="container-fluid">
-   
-        <nav class="navbar navbar-expand-lg navbar-light ">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-             
-             
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="principal.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="reservas.html">Estambul</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="restaurante.html" tabindex="-1" aria-disabled="true">Dubai</a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link disabled" href="restaurante.html" tabindex="-1" aria-disabled="true">Seul</a>
-                </li>
-               
-              </ul>
-            
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
+  <header class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="principal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="restaurante.html">Estambul</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="restaurante.html" tabindex="-1" aria-disabled="true">Dubai</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="restaurante.html" tabindex="-1" aria-disabled="true">Seul</a>
+            </li>
+
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+    <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+      aria-controls="offcanvasTop">Cometé el Mundo</button>
+    <!--menu desplegable para ir a restaurantes y pagina reserva-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel">Elige destino</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="carta.html">Dubai</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carta.html">Seúl</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carta.html" tabindex="-1" aria-disabled="true">Estambúl</a>
+          </li>
+          <li class="nav-item"></li>
+          <a class="nav-link " href="reservas.html" tabindex="-1" aria-disabled="true">Reservas</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+
+    <h3 class="text-center">Experiencia Dubai</h3>
+    <h1 class="text-center mt-5">Cometé el Mundo</h1>
+
+
+
+
+  </header>
+
+  <main class="container-fluid mt-5">
+
+    <section class="container" id="video">
+
+      <video src="/img/video.mp4" class="w-100" autoplay loop muted></video>
+      <h1>Queremos que disfrutes del viajepor ello queremos mostrarte un poco de lo que vas a vivir. </h1>
+    </section>
+
+    <section id="section-1" class="container">
+
+      <h4>En Pirueta Dubai encontrarás ambientes diferentes</h4>
+      <div class="imagenes container">
+
+        <div class="img1">
+          <div class="texto_img d-flex flex-column">
+            <h5>Terraza Chill</h5>
+            <p>Disfruta de un espectáculo increible de las fuentes acompañado de tu pareja en un día especial, si tienes
+              algo que celebrar este es tu espacio perfecto para ello.</p>
+          </div>
+        </div>
+        <div class="img2">
+          <div class="texto_img d-flex flex-column">
+            <h5>Salón Ejecutivo</h5>
+            <p>Un espacio para los negocios que no se pueden aplazar para después de las comidas, mientras te reunes
+              también se puede disfrutar de una comida perfecta.</p>
+          </div>
+        </div>
+        <div class="img3">
+          <div class="texto_img d-flex flex-column">
+            <h5>Terraza Intimidad</h5>
+            <p>Lugar privilegiado dedicado a reuniones de entre 10 y 30 amigos , apartados del comedor una zona vip con
+              vistas a la espcatacular ciudad nocturna de Dubai.</p>
+          </div>
+        </div>
+        <div class="img4">
+          <div class="texto_img d-flex flex-column">
+            <h5>Terraza Bienvenida</h5>
+            <p>Nuestro lugar de recepción para todos nuestros invitados, un espacio donde tomaros algo fresquito
+              mientras os llevamos a vuestra mesa.</p>
+          </div>
+
+
+        </div>
+
+
+
+
+      </div>
+    </section>
+    <section>
+
+      <section id="section-2" class="container">
+        <h4>Nuestro más preciado tesoro</h4>
+        <div class="imagenes">
+          <div class="img11">
+            <div class="texto_img d-flex flex-column">
+              <h5>Bodegas de Vinos</h5>
+              <p>Cava con más de 200 referencias de vinos de todo el continente.</p>
+            </div>
+
+          </div>
+          <div class="img12">
+            <div class="texto_img d-flex flex-column">
+              <h5>Bodegas de Champagne</h5>
+              <p>Desde los más tradicionales hasta los más novedodos champagnes del mundo.</p>
             </div>
           </div>
-        </nav>
-    
-    
-        <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
-          aria-controls="offcanvasTop">Cometé el Mundo</button>
-        <!--menu desplegable para ir a restaurantes y pagina reserva-->
-        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-          <div class="offcanvas-header">
-            <h5 id="offcanvasTopLabel">Elige destino</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-    
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="carta.html">Dubai</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="carta.html">Seúl</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="carta.html" tabindex="-1" aria-disabled="true">Estambúl</a>
-              </li>
-              <li class="nav-item"></li>
-              <a class="nav-link " href="reservas.html" tabindex="-1" aria-disabled="true">Reservas</a>
-              </li>
-            </ul>
-    
-          </div>
         </div>
-        </div>
-        
-            <h3 class="text-center">Experiencia Dubai</h3>
-            <h1 class="text-center mt-5">Cometé el Mundo</h1>
-         
-    
-        
-       
-      </header>
-
-      <main class="container-fluid mt-5">
-
-        <section class="container" id="video">
-         
-          <video src="/img/video.mp4" class="w-100" autoplay loop muted></video>
-     <h1>Queremos que disfrutes del viajepor ello queremos mostrarte un poco de lo que vas a vivir. </h1>
-        </section>
-
-        <section id="imagenes" class="container">
-           
-            <h4>En Pirueta Dubai encontrarás ambientes diferentes</h4>
-            <div class="imagenes container">
-              <div class="d-flex flex-row  ">
-                <div class="img1">
-                  <div class="texto_img d-flex flex-column">
-                    <h5>Terraza Chill</h5>
-                    <p>Disfruta de un espectáculo increible de las fuentes acompañado de tu pareja en un día especial, si tienes algo que celebrar este es tu espacio perfecto para ello.</p>
-                  </div>
-                 </div>
-               
-               
-              </div>
-              
-
-              <div class="img2"></div>
-              <div class="img3"></div>
-              <div class="img4"></div>
-              <div class="img5"></div>
-              
+      </section>
+      <section id="section-2" class="container">
+        <h4>Zonas de copas</h4>
+        <div class="imagenes">
+          <div class="img6">
+            <div class="texto_img d-flex flex-column">
+              <h5>Sky club</h5>
+              <p>Baila al ritmo de los DJ´s más importantes del momento, donde podrás bailar hasta el amanecer.</p>
             </div>
-            <div class="imagenes">
-              <div class="img6"></div>
-              <div class="img7"></div>
-              <div class="img8"></div>
-              <div class="img9"></div>
-              <div class="img10"></div>
-              <div class="img11"></div>
-              <div class="img12"></div>
+          </div>
+          <div class="img7">
+            <div class="texto_img d-flex flex-column">
+              <h5>Sky club</h5>
+              <p>Por si no te habías fijado bien desde la azotea puedes divisar toda la ciudad.</p>
             </div>
-          </section>
-       
-      </main>
+          </div>
+          
+          <div class="img9">
+            <div class="texto_img d-flex flex-column">
+              <h5>Terraza del Mar</h5>
+              <p>Las tardes se llevan mejor con una copa y un buen atardecer.</p>
+            </div>
+          </div>
+          <div class="img10">
+            <div class="texto_img d-flex flex-column">
+              <h5>Terraza del Mar</h5>
+              <p>Puedes disfrutar de este maravilloso espacio a partir de las 17:00 horas.</p>
+            </div>
+          </div>
+          </div>
 
-       
-      <footer class="d-flex ">
-        <div class="foo_text">
-          <p>Preguntas Frecuentes</p>
-          <p>Contacto</p>
-          <p>Email: pirueta@gmail.com</p>
         </div>
-        <div class="foo_icons d-flex ">
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </footer>
-    
-    
+      </section>
+
+  </main>
+
+
+  <footer class="d-flex ">
+    <div class="foo_text">
+      <p>Preguntas Frecuentes</p>
+      <p>Contacto</p>
+      <p>Email: pirueta@gmail.com</p>
+    </div>
+    <div class="foo_icons d-flex ">
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+
 </body>
+
 </html>
 
 

@@ -116,16 +116,21 @@
     background-position: center;
 }
 @mixin imgHover{
-    width: 800px;
-    transition:linear 0.5s;
+    width: 1000px;
+    transition: linear 0.5s;
     
 }
+@mixin backgroundTextosImg{
+    background-color: rgba(128, 128, 128, 0.784);
+}
+
 
 
 
 .imagenes{
     width: 100%;
     height: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -182,11 +187,12 @@
         background-image: url("/img/wine-cellar-side.jpg");
 
 }
-.img12{
-    @include imagenes();
-    background-image: url("/img/wine-cellar.jpg");
+    .img12{
+        @include imagenes();
+        background-image: url("/img/wine-cellar.jpg");
 
 }
+
 
 }
 /*hace los hover de las imagenes*/
@@ -195,19 +201,85 @@ $imagenes : img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
 @each $img in $imagenes{
     .imagenes .#{$img}:hover{
         @include imgHover();
+        .texto_img{
+            width: 50%;
+            border-radius: 10px;
+        }
+       
+      
+      
     }
+ 
+}
+.texto_img{
+    background-color: rgba(128, 128, 128, 0.784);
+    width:80% ;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    h5 {
+        color:$text-color;
+        @include letraTextos();
+        font-weight: 600;
+        font-size: clamp(20px, 2vw, 15px);
+      }
+
+      p{
+        color:$text-color;
+        @include letraTextos();
+        font-size: clamp(15px, 2vw, 10px);
+      }
 }
 
 
+ 
+ 
+ 
 
 
+@media only screen and(max-width: 768px) {
+    .imagenes{
+      position: relative;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+    }
+    .texto_img{
+       width: 80%;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        overflow: hidden;
+   
+    }
+    @each $img in $imagenes{
+      .imagenes .#{$img}:hover{
+          @include imgHover();
+          justify-content: center;
+          align-content:flex-start;
+          overflow: hidden;
+          .texto_img{
+           position: fixed;
+           left: 0px;
+         // justify-items: center;
+           text-align: center;
+           width: 80%;
+           transform: translateX(10px);
+           // visibility: hidden;
+           
+              
 
-
-
-
-
-
-
+          }
+      
+        
+        
+      }
+   
+  }
+    
+    
+}
 
 
 

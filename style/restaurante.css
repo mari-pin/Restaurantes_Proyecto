@@ -98,6 +98,7 @@ h2::first-letter {
 .imagenes {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -213,65 +214,316 @@ h2::first-letter {
 
 /*hace los hover de las imagenes*/
 .imagenes .img1:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img1:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img2:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img2:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img3:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img3:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img4:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img4:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img5:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img5:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img6:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img6:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img7:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img7:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img8:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img8:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img9:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img9:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img10:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img10:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img11:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
+}
+.imagenes .img11:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
 }
 
 .imagenes .img12:hover {
-  width: 800px;
+  width: 1000px;
   transition: linear 0.5s;
 }
+.imagenes .img12:hover .texto_img {
+  width: 50%;
+  border-radius: 10px;
+}
 
+.texto_img {
+  background-color: rgba(128, 128, 128, 0.784);
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.texto_img h5 {
+  color: blanchedalmond;
+  font-family: "new-spirit,serif";
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 15px);
+}
+.texto_img p {
+  color: blanchedalmond;
+  font-family: "new-spirit,serif";
+  font-size: clamp(15px, 2vw, 10px);
+}
+
+@media (max-width: 768px) {
+  .imagenes {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+  }
+  .texto_img {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+  }
+  .imagenes .img1:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img1:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img2:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img2:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img3:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img3:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img4:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img4:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img5:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img5:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img6:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img6:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img7:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img7:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img8:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img8:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img9:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img9:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img10:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img10:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img11:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img11:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+  .imagenes .img12:hover {
+    width: 1000px;
+    transition: linear 0.5s;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+  }
+  .imagenes .img12:hover .texto_img {
+    position: fixed;
+    left: 0px;
+    text-align: center;
+    width: 80%;
+    transform: translateX(10px);
+  }
+}
 /*footer*/
 footer {
   position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/

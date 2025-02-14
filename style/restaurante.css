@@ -1,11 +1,11 @@
 body {
   filter: grayscale(0.5);
-  background-color: blanchedalmond;
+  background-color: rgb(255, 235, 205);
 }
 
 header {
   width: 100vw;
-  height: 30vh;
+  height: 10vh;
 }
 header nav {
   background-color: rgba(76, 97, 97, 0.9764705882);
@@ -14,33 +14,29 @@ header .navbar-toggler {
   color: blanchedalmond;
   background-color: blanchedalmond;
 }
+header button {
+  color: #2f4f4f !important;
+  background-color: blanchedalmond !important;
+}
 
-button {
-  color: blanchedalmond;
+.logo {
+  font-family: "Henny Penny", serif;
+  font-size: clamp(24px, 6vw, 40px);
+  color: rgba(76, 97, 97, 0.9764705882);
 }
 
 h1 {
-  font-family: "Lobster", serif;
-  font-weight: 400;
-  font-size: 55px;
-  color: rgba(76, 97, 97, 0.9764705882);
-  animation: animacionH1 5s ease;
-  font-style: normal;
-  font-weight: 500;
-}
-
-h3 {
   position: relative;
-  top: 50px;
-  font-size: 55px;
+  font-size: clamp(24px, 6vw, 55px);
   font-family: "Lobster", serif;
   font-weight: 400;
-  font-size: 55px;
-  color: rgba(76, 97, 97, 0.9764705882);
-  text-shadow: 1px 5px #667f61;
+  background: linear-gradient(90deg, #f98267, #faea58);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: animacionH3 5s ease;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 @keyframes animacionH3 {
@@ -49,7 +45,7 @@ h3 {
     opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(100px);
     opacity: 1;
   }
 }
@@ -73,37 +69,63 @@ h3 {
   font-size: 20px;
 }
 
-h2 {
-  font-family: "new-spirit,serif";
-  background-color: rgba(128, 128, 128, 0.376);
-  border-radius: 20px;
-  color: blanchedalmond;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-shadow: 3px 3px rgba(96, 129, 119, 0.7294117647);
-  letter-spacing: 2px;
-}
-h2::first-letter {
-  font-size: 50px;
+#video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.container {
-  border-radius: 20px;
-  margin-top: 50px;
-  padding: 20px;
-  box-shadow: 5px 5px 5px 5px rgba(96, 129, 119, 0.7294117647);
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.video_contenido {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 50px;
 }
 
 h4 {
   letter-spacing: 2px;
-  color: #e1ebe8;
+  color: rgba(76, 97, 97, 0.9764705882);
   font-family: "new-spirit,serif";
   font-weight: 200;
-  font-size: 35px;
-  filter: saturate(200%);
+  font-size: clamp(25px, 3vw, 40px);
+  filter: drop-shadow(2px 2px 2px #d4993a);
 }
 h4::first-letter {
-  font-size: 50px;
+  font-size: 55px;
+}
+
+.imagenes:hover ~ .text {
+  visibility: hidden;
+  width: 0px;
+}
+
+.img1 {
+  width: 500px;
+}
+
+.text {
+  font-size: clamp(10px, 2vw, 20px);
+  text-wrap: wrap;
+  word-wrap: break-word;
+  width: 20%;
+  position: relative;
+  top: 200px;
+  letter-spacing: 2px;
+  font-family: "new-spirit,serif";
 }
 
 .imagenes {
@@ -115,7 +137,62 @@ h4::first-letter {
   justify-content: center;
   border-radius: 10px;
   margin-bottom: 10px;
-  background-color: rgba(128, 128, 128, 0.703);
+  /* 
+    .img1 {
+      @include imagenes();
+      width: 500px;
+      background-image: url("/img/garden-sofa.jpg");
+    }
+    .img2 {
+      @include imagenes();
+      background-image: url("/img/atolye.jpg");
+    }
+
+    .img3 {
+      @include imagenes();
+      background-image: url("/img/caption.jpg");
+    }
+    .img4 {
+      @include imagenes();
+      background-image: url("/img/portada.jpg");
+    }
+
+    .img5 {
+      @include imagenes();
+      background-image: url("/img/knife-showcase.jpg");
+    }
+    .img6 {
+      @include imagenes();
+  ;
+      background-image: url("/img/rest_rascacielos2.jpg");
+    }
+    .img7 {
+      @include imagenes();
+      background-image: url("/img/rest_rascacielos1.jpg");
+    }
+    .img8 {
+      @include imagenes();
+      background-image: url("/img/tamoka-dubai.jpg");
+    }
+    .img9 {
+      @include imagenes();
+      background-image: url("/img/tamoka_-gallery-08-620c1da8cf6bd.jpg");
+    }
+    .img10 {
+      @include imagenes();
+      width: 500px;
+      background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
+    }
+    .img11 {
+      @include imagenes();
+      width: 300px;
+      background-image: url("/img/wine-cellar-side.jpg");
+    }
+    .img12 {
+      @include imagenes();
+      background-image: url("/img/bodega_cavas.jpg");
+      width: 300px;
+    } */
 }
 .imagenes .img1 {
   width: 100px;
@@ -124,8 +201,8 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url("/img/img1.jpg");
   width: 500px;
-  background-image: url("/img/portada.jpg");
 }
 .imagenes .img2 {
   width: 100px;
@@ -134,7 +211,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/atolye.jpg");
+  background-image: url("/img/img2.jpg");
 }
 .imagenes .img3 {
   width: 100px;
@@ -143,7 +220,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/caption.jpg");
+  background-image: url("/img/img3.jpg");
 }
 .imagenes .img4 {
   width: 100px;
@@ -152,7 +229,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/garden-sofa.jpg");
+  background-image: url("/img/img4.jpg");
 }
 .imagenes .img5 {
   width: 100px;
@@ -161,7 +238,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/knife-showcase.jpg");
+  background-image: url("/img/img5.jpg");
 }
 .imagenes .img6 {
   width: 100px;
@@ -170,7 +247,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/rest_rascacielos2.jpg");
+  background-image: url("/img/img6.jpg");
 }
 .imagenes .img7 {
   width: 100px;
@@ -179,7 +256,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/rest_rascacielos1.jpg");
+  background-image: url("/img/img7.jpg");
 }
 .imagenes .img8 {
   width: 100px;
@@ -188,7 +265,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/tamoka-dubai.jpg");
+  background-image: url("/img/img8.jpg");
 }
 .imagenes .img9 {
   width: 100px;
@@ -197,7 +274,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/tamoka_-gallery-08-620c1da8cf6bd.jpg");
+  background-image: url("/img/img9.jpg");
 }
 .imagenes .img10 {
   width: 100px;
@@ -206,8 +283,8 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url("/img/img10.jpg");
   width: 500px;
-  background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
 }
 .imagenes .img11 {
   width: 100px;
@@ -216,8 +293,7 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 300px;
-  background-image: url("/img/wine-cellar-side.jpg");
+  background-image: url("/img/img11.jpg");
 }
 .imagenes .img12 {
   width: 100px;
@@ -226,8 +302,8 @@ h4::first-letter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/bodega_cavas.jpg");
-  width: 300px;
+  background-image: url("/img/img12.jpg");
+  width: 500px;
 }
 
 /*hace los hover de las imagenes*/
@@ -408,10 +484,11 @@ h4::first-letter {
   text-align: center;
 }
 .texto_img h5 {
+  word-wrap: break-word;
   color: blanchedalmond;
   font-family: "new-spirit,serif";
   font-weight: 600;
-  font-size: clamp(20px, 2vw, 15px);
+  font-size: clamp(15px, 2vw, 20px);
 }
 .texto_img p {
   color: blanchedalmond;
@@ -419,7 +496,7 @@ h4::first-letter {
   font-size: clamp(15px, 2vw, 10px);
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .imagenes {
     flex-direction: column;
     position: relative;
@@ -492,8 +569,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img1:not(:hover) .texto_img {
     opacity: 0;
@@ -503,8 +580,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img2:not(:hover) .texto_img {
     opacity: 0;
@@ -514,8 +591,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img3:not(:hover) .texto_img {
     opacity: 0;
@@ -525,8 +602,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img4:not(:hover) .texto_img {
     opacity: 0;
@@ -536,8 +613,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img5:not(:hover) .texto_img {
     opacity: 0;
@@ -547,8 +624,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img6:not(:hover) .texto_img {
     opacity: 0;
@@ -558,8 +635,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img7:not(:hover) .texto_img {
     opacity: 0;
@@ -569,8 +646,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img8:not(:hover) .texto_img {
     opacity: 0;
@@ -580,8 +657,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img9:not(:hover) .texto_img {
     opacity: 0;
@@ -591,8 +668,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img10:not(:hover) .texto_img {
     opacity: 0;
@@ -602,8 +679,8 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img11:not(:hover) .texto_img {
     opacity: 0;
@@ -613,20 +690,24 @@ h4::first-letter {
     position: fixed;
     left: 0px;
     text-align: center;
-    width: 80%;
-    transform: translateX(50px);
+    width: 60%;
+    transform: translateX(55px);
   }
   .imagenes:hover .img12:not(:hover) .texto_img {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
 }
+.section {
+  width: 100%;
+  height: 100%;
+}
+
 /*footer*/
 footer {
-  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
-  bottom: 0px;
   justify-content: space-around;
-  margin-top: 50px;
+  position: relative;
+  margin-top: 100px;
   background-color: rgba(76, 97, 97, 0.9764705882);
 }
 footer div {
@@ -635,14 +716,15 @@ footer div {
 footer .foo_text {
   color: blanchedalmond;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 footer .foo_text p {
-  margin: 10px;
-  font-size: 20px;
+  margin: 1px;
+  font-size: clamp(10px, 2vw, 20px);
 }
 footer .foo_icons i {
   color: blanchedalmond;
   margin: 10px;
-  font-size: 25px;
+  font-size: clamp(10px, 2vw, 20px);
 }/*# sourceMappingURL=restaurante.css.map */

@@ -1,25 +1,39 @@
+//colores
+$text-color: blanchedalmond;
+$color-oscuro: #4c6161f9;
+$color-background: #2f4f4f;
+$gradient-text: linear-gradient(90deg, #ff7e5f, #feb47b);
+
+
+
+// tamaños
+$border-radius: 10px;
+$gap-img: 20px;
+$width-img: 100px;
+$height-img: 500px;
+
+
 @mixin letraMarca {
- font-family:  "Lobster", serif;
+  font-family:"Lobster", serif;
   font-weight: 400;
-  font-size: 55px;
+ 
 }
 
 @mixin letraTextos {
   font-family: "new-spirit,serif";
 }
 
-//variables
-$text-color: blanchedalmond;
-$color-oscuro: #4c6161f9;
-$color-background: #2f4f4f;
+
+
+
 
 body {
   filter: grayscale(0.5);
-  background-color: blanchedalmond;
+  background-color: rgb(255, 235, 205);
 }
 header {
   width: 100vw;
-  height: 30vh;
+  height: 10vh;
 
   nav {
     background-color: $color-oscuro;
@@ -28,29 +42,31 @@ header {
     color: $text-color;
     background-color: $text-color;
   }
-}
-button {
-  color: $text-color;
-}
-h1 {
-  @include letraMarca();
-  color: $color-oscuro;
- // text-shadow: 1px 5px #667f61; //
-  animation: animacionH1 5s ease;
-  font-style: normal;
-  font-weight: 500;
+  button {
+    color:$color-background !important;
+    background-color: $text-color !important;
+  }
+  
 }
 
-h3 {
+.logo{
+  font-family: "Henny Penny", serif;
+
+  font-size: clamp(24px, 6vw, 40px);
+  color: $color-oscuro;
+
+}
+h1{
   position: relative;
-  top: 50px;
-  font-size: 55px;
-  @include letraMarca();
-  color:$color-oscuro;
-  text-shadow: 1px 5px #667f61; //
+  font-size: clamp(24px, 6vw, 55px);
+  @include letraMarca(); 
+   background: linear-gradient(90deg, #f98267, #faea58);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: animacionH3 5s ease;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 500;
 }
 @keyframes animacionH3 {
   0% {
@@ -58,7 +74,7 @@ h3 {
     opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(100px);
     opacity: 1;
   }
 }
@@ -81,55 +97,81 @@ h3 {
   font-size: 20px;
 }
 
-h2 {
-  @include letraTextos();
-  background-color: rgba(128, 128, 128, 0.376);
-  border-radius: 20px;
-  color: $text-color;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-shadow: 3px 3px#608177ba;
-  letter-spacing: 2px;
-  &::first-letter {
-    font-size: 50px;
-  }
+
+#video{
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  z-index: -1;
+
+}
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transform: translate(-50%, -50%);
+}
+.video_contenido{
+  position: relative;
+  z-index: 1; 
+  color: white;
+  text-align: center;
+  padding: 50px;
 }
 
-.container {
-  border-radius: 20px;
-  margin-top: 50px;
-  padding: 20px;
-  box-shadow: 5px 5px 5px 5px #608177ba;
-}
-
-@mixin imagenes {
-  width: 100px;
-  height: 500px;
-  gap: 20px;
+@mixin imagenes ($width: $width-img, $height: $height-img) {
+  width: $width;
+  height: $height;
+  gap: $gap-img;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-@mixin imgHover {
-  width: 1000px;
+@mixin imgHover($width-hover: 1000px) {
+  width:$width-hover;
   transition: linear 0.5s;
 }
 @mixin backgroundTextosImg {
   background-color: rgba(128, 128, 128, 0.784);
 }
 h4 {
-  
   letter-spacing: 2px;
-  color: #e1ebe8;
+  color:$color-oscuro;
   @include letraTextos();
   font-weight: 200;
-  font-size: 35px;
-  filter:saturate(200%);
+  font-size: clamp(25px, 3vw, 40px);
+  filter: drop-shadow(2px 2px 2px #d4993a);
   &::first-letter {
-    font-size: 50px;
+    font-size: 55px;
   }
 }
 
+.imagenes:hover ~ .text{
+ visibility: hidden;
+  width: 0px;
+
+}
+.img1{
+  width: 500px;
+}
+.text{
+  font-size: clamp(10px, 2vw, 20px);
+  text-wrap: wrap;
+  word-wrap: break-word;
+  width: 20%;
+  position: relative;
+  top: 200px;
+  
+  letter-spacing: 2px;
+  @include letraTextos();
+  
+}
+//imagenes
+$imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
 
 .imagenes {
   width: 100%;
@@ -138,14 +180,27 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
- border-radius: 10px;
+ border-radius: $border-radius;
  margin-bottom: 10px;
-  background-color: rgba(128, 128, 128, 0.703);
+ 
 
+ //puedo eliminarlo aun por si quiero dejar lo anterior para que algunas imagenes tengan un tamaño diferente
+ @each $img in $imagenes {
+  .#{$img} {
+    @include imagenes();
+    background-image: url("/img/#{$img}.jpg");
+    @if $img == img1 or $img == img10 or $img == img12 {
+      width: 500px;
+    }
+  }
+
+ 
+}
+/* 
   .img1 {
     @include imagenes();
     width: 500px;
-    background-image: url("/img/portada.jpg");
+    background-image: url("/img/garden-sofa.jpg");
   }
   .img2 {
     @include imagenes();
@@ -158,7 +213,7 @@ h4 {
   }
   .img4 {
     @include imagenes();
-    background-image: url("/img/garden-sofa.jpg");
+    background-image: url("/img/portada.jpg");
   }
 
   .img5 {
@@ -196,18 +251,17 @@ h4 {
     @include imagenes();
     background-image: url("/img/bodega_cavas.jpg");
     width: 300px;
-  }
+  } */
   
 }
 /*hace los hover de las imagenes*/
-$imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
 
 @each $img in $imagenes {
   .imagenes .#{$img}:hover {
     @include imgHover();
     .texto_img {
       width: 50%;
-      border-radius: 10px;
+      border-radius: $border-radius;
     }
   }
   .imagenes:hover .#{$img}:not(:hover) .texto_img {
@@ -223,10 +277,11 @@ $imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
   overflow: hidden;
   text-align: center;
   h5 {
+    word-wrap: break-word;
     color: $text-color;
     @include letraTextos();
     font-weight: 600;
-    font-size: clamp(20px, 2vw, 15px);
+    font-size: clamp(15px, 2vw, 20px);
   }
 
   p {
@@ -236,7 +291,8 @@ $imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
   }
 }
 
- @media (min-width: 600px) and (max-width:768px) {
+ @media  (max-width:768px) {
+
   .imagenes {
     flex-direction: column;
     position: relative;
@@ -249,7 +305,7 @@ $imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
     .imagenes .#{$img} {
       width: 100%;
       margin-bottom: 10px;
-      border-radius: 10px;
+      border-radius: $border-radius;
     }
   }
 
@@ -259,8 +315,8 @@ $imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
         position: fixed;
         left: 0px;
         text-align: center;
-        width: 80%;
-        transform: translateX(50px);
+        width: 60%;
+        transform: translateX(55px);
       }
     }
     .imagenes:hover .#{$img}:not(:hover) .texto_img {
@@ -270,13 +326,16 @@ $imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
   }
 }
  
-
+.section{
+  width: 100%;
+  height: 100%;
+}
 /*footer*/
 footer {
-  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
-  bottom: 0px;
   justify-content: space-around;
-  margin-top: 50px;
+  position: relative;
+
+  margin-top: 100px;
   background-color: $color-oscuro;
   div {
     flex-wrap: wrap;
@@ -284,17 +343,18 @@ footer {
   .foo_text {
     color: $text-color;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 
     p {
-      margin: 10px;
-      font-size: 20px;
+      margin: 1px;
+      font-size:clamp(10px, 2vw, 20px);
     }
   }
 
   .foo_icons i {
     color: $text-color;
     margin: 10px;
-    font-size: 25px;
+    font-size:clamp(10px, 2vw, 20px);
   }
 }

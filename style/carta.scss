@@ -260,8 +260,8 @@ $titulos: (
   h4 {
   
     letter-spacing: 2px;
-    color: #e1ebe8;
-    @include letraTextos();
+    color:$color-oscuro;
+    @include letraMarca();
     font-weight: 200;
     font-size: 35px;
     filter:saturate(200%);

@@ -268,8 +268,10 @@ h2::first-letter {
 }
 .principal h4 {
   letter-spacing: 2px;
-  color: #e1ebe8;
-  font-family: "new-spirit,serif";
+  color: rgba(24, 41, 41, 0.9764705882);
+  font-family: "Lobster", serif;
+  font-weight: 400;
+  font-size: 55px;
   font-weight: 200;
   font-size: 35px;
   filter: saturate(200%);

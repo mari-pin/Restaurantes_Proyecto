@@ -1,5 +1,5 @@
 @mixin letraMarca {
-  font-family: "Henny Penny", serif;
+  font-family:  "Lobster", serif;
   font-weight: 400;
   font-size: 55px;
 }
@@ -17,7 +17,7 @@ $color-background:#2f4f4f;
 
 body {
   filter:grayscale(0.5);
-  background-color:#2f4f4ffb;
+  background-color: blanchedalmond;
 }
 header {
   width: 100vw;
@@ -40,8 +40,8 @@ h3 {
   top: 50px;
   font-size: 55px;
   @include letraMarca();
-  color: rgba(255, 235, 205, 0.97);
-  text-shadow: 1px 5px  #667f61; //
+  color:$color-oscuro;
+ // text-shadow: 1px 5px  #667f61; //
   animation: animacionH3 5s ease;
   font-style: normal;
   font-weight: 900;
@@ -78,14 +78,14 @@ h3 {
 }
 
 h2 {
-  @include letraTextos();
+  @include letraMarca();
   background-color: rgba(128, 128, 128, 0.376); 
   border-radius: 20px;
-  color: $text-color;
-  font-weight: bold;
+  color: $color-oscuro;
+  font-weight: 100;
   letter-spacing: 3px;
-  text-shadow: 3px 3px#608177ba;
-  letter-spacing: 2px;
+  //text-shadow: 3px 3px#608177ba;
+ 
   &::first-letter {
     font-size: 50px;
   }
@@ -313,7 +313,7 @@ $titulos: (
     position: static;
     height: fit-content;
     filter:drop-shadow(2px 2px 2px #00000081); 
-    background-color: rgba(128, 128, 128, 0.376); 
+    background-color: rgba(101, 101, 101, 0.588); 
     border-radius: 20px;
     justify-content: center;
     align-content: center;

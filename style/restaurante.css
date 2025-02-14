@@ -1,6 +1,6 @@
 body {
   filter: grayscale(0.5);
-  background-color: rgba(47, 79, 79, 0.9843137255);
+  background-color: blanchedalmond;
 }
 
 header {
@@ -20,11 +20,10 @@ button {
 }
 
 h1 {
-  font-family: "Henny Penny", serif;
+  font-family: "Lobster", serif;
   font-weight: 400;
   font-size: 55px;
-  color: blanchedalmond;
-  text-shadow: 1px 5px #667f61;
+  color: rgba(76, 97, 97, 0.9764705882);
   animation: animacionH1 5s ease;
   font-style: normal;
   font-weight: 500;
@@ -34,10 +33,10 @@ h3 {
   position: relative;
   top: 50px;
   font-size: 55px;
-  font-family: "Henny Penny", serif;
+  font-family: "Lobster", serif;
   font-weight: 400;
   font-size: 55px;
-  color: rgba(255, 235, 205, 0.97);
+  color: rgba(76, 97, 97, 0.9764705882);
   text-shadow: 1px 5px #667f61;
   animation: animacionH3 5s ease;
   font-style: normal;

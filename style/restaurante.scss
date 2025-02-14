@@ -1,5 +1,5 @@
 @mixin letraMarca {
-  font-family: "Henny Penny", serif;
+ font-family:  "Lobster", serif;
   font-weight: 400;
   font-size: 55px;
 }
@@ -15,7 +15,7 @@ $color-background: #2f4f4f;
 
 body {
   filter: grayscale(0.5);
-  background-color: #2f4f4ffb;
+  background-color: blanchedalmond;
 }
 header {
   width: 100vw;
@@ -34,8 +34,8 @@ button {
 }
 h1 {
   @include letraMarca();
-  color: $text-color;
-  text-shadow: 1px 5px #667f61; //
+  color: $color-oscuro;
+ // text-shadow: 1px 5px #667f61; //
   animation: animacionH1 5s ease;
   font-style: normal;
   font-weight: 500;
@@ -46,7 +46,7 @@ h3 {
   top: 50px;
   font-size: 55px;
   @include letraMarca();
-  color: rgba(255, 235, 205, 0.97);
+  color:$color-oscuro;
   text-shadow: 1px 5px #667f61; //
   animation: animacionH3 5s ease;
   font-style: normal;

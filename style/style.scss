@@ -1,5 +1,7 @@
+
+
 @mixin letraMarca{
-    font-family: "Henny Penny", serif;
+    font-family: "Lobster", serif;
     font-weight: 400;
     font-size:45px ;    
 }
@@ -10,17 +12,18 @@
 }
 //variables 
 $text-color: blanchedalmond;
-$color-oscuro:#182929f9;
-$color-background:darkslategrey;
+$color-oscuro: #4c6161f9;
+$color-background: #2f4f4f;
+$gradient-text: linear-gradient(90deg, #ff7e5f, #feb47b);
 
 
 body{
-    filter: sepia(100px);
-    background-color:$color-oscuro;
+    filter:blur(0.5);
+    background-color: rgb(225, 208, 183);
 }
 header{
     background-image: url("/img/manipulation-4412444_1280.jpg");
-    background-color: 0.2;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -28,7 +31,6 @@ header{
    
     nav{
         background-color: transparent;
-
        .navbar-toggler{
         color:$text-color;
         background-color: $text-color;
@@ -45,9 +47,8 @@ header{
         position: relative;
         top: 230px;
         font-size:50px;
-        @include letraMarca();
-        color: #667f61;
-        text-shadow: 1px 2px #603008;
+        font-family: "Henny Penny", serif;
+        color:$text-color;
         animation: animacionH3 5s ease;
         font-style: normal;
         font-weight: 900;
@@ -75,14 +76,14 @@ header{
     }
 
     h1{
-        animation:  animacion 5s;
+        @include letraTextos();
+        animation: ease animacion 5s;
         position: relative;
         top: 30%;
-        color: #667f61; 
-        font-family: "new-spirit",serif;
-        text-shadow: 1px 2px #603008;
+        color:$text-color;
+        text-shadow: 1px 2px #ee9f16;
         font-size: 2.5rem;
-        font-weight: 400;
+        font-weight: 900;
         text-align: center;
         text-transform: uppercase;
         
@@ -110,9 +111,9 @@ header{
 
 section{
     width: 100vw;
-    margin-top: 100px;
+    margin-top: 20px;
     align-items: center;
-    justify-content: space-around;
+   // justify-content: space-around;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
@@ -120,15 +121,30 @@ section{
 }
 
 .card{
+ 
    border-radius: 20px;
-   background-color: $color-oscuro;
-   box-shadow: 2px 5px $text-color;
+   background-color: rgb(180, 163, 137);
+   box-shadow: 2px 5px rgb(99, 90, 75);
    margin-top: 30px;
    margin-left: 8px;
+   .card-img-top{
+    cursor: pointer;
+    border-radius: 20px 20px 0px 0px;
+   }
+   .card-img-top:active{
+    transform: scale(1.2);
+    transition: 0.5s;
    
+   }
    .card-body{
+    position: absolute;
+    min-height: 300px; /* Ajusta según necesites */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
     text-align: center;
-    color:$text-color;
+    color:  #0e1d1d; 
    
     
     
@@ -136,52 +152,73 @@ section{
    }
    .card-title{
     @include letraMarca();
-    text-shadow: 2px 2px gray;
     font-weight: bold;
-    font-size: 25px;
+    font-size:clamp(20px, 2vw, 35px);
 
    }
    .card-text{
+    font-size: clamp(12px, 2vw, 20px);
     @include letraTextos();
+    font-weight: 800;
     height: 0px;
     visibility: hidden;
     
    }
+   a{
+    visibility: hidden;
+    color: #0e1d1d;
+    font-size: 20px;
+    @include letraTextos();
+    font-weight: 800;
+   }
+
+   &:hover .card-body{
+    position: relative;
+   
+   }
    &:hover .card-text{
-    height: 70%;
+  
+    height: 80%;
     visibility: visible;
-    transition: 0.2s;
+    transition: 0.5s;
+}
+&:hover a{
+    visibility: visible;
 }
 
    .btn{
+    
     background-color: #0e1d1d; 
     color:$text-color;
 
    }
 }
-footer{
-    position: sticky;/*para que se quede fijo en la pantalla al hacer scroll*/
-    bottom: 0px;
+/*footer*/
+footer {
     justify-content: space-around;
-    margin-top: 50px;
-    background-color: #142525;
-
-    .foo_text{
-        color:$text-color;
-        display: flex;
-        justify-content: space-around;
-        
-        p{
-            margin: 10px;
-            font-size: 20px;
-        }
-
+    position: relative;
+  
+    margin-top: 100px;
+    background-color: $color-oscuro;
+    div {
+      flex-wrap: wrap;
     }
-    
-    .foo_icons i{
-            color: $text-color;
-            margin: 10px;
-            font-size: 25px;
-    
+    .foo_text {
+      color: $text-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  
+      p {
+        margin: 1px;
+        font-size:clamp(10px, 2vw, 20px);
+      }
     }
-}
+  
+    .foo_icons i {
+      color: $text-color;
+      margin: 10px;
+      font-size:clamp(10px, 2vw, 20px);
+    }
+  }
+  

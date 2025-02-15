@@ -1,7 +1,7 @@
 @mixin letraMarca {
   font-family:  "Lobster", serif;
   font-weight: 400;
-  font-size: 55px;
+ 
 }
 
 @mixin letraTextos {
@@ -22,23 +22,26 @@ body {
 header {
   width: 100vw;
   height: 30vh;
-
   nav {
-    background-color:$color-oscuro;
+    background-color: $color-oscuro;
   }
   .navbar-toggler {
     color: $text-color;
     background-color: $text-color;
   }
+  button {
+    color:$color-background !important;
+    background-color: $text-color !important;
+  }
 }
-button {
+/* button {
   color: $text-color;
-}
+} */
 
 h3 {
   position: relative;
   top: 50px;
-  font-size: 55px;
+  font-size: clamp(25px, 5vw, 45px);
   @include letraMarca();
   color:$color-oscuro;
  // text-shadow: 1px 5px  #667f61; //
@@ -79,6 +82,7 @@ h3 {
 
 h2 {
   @include letraMarca();
+  font-size: clamp(20px, 2vw, 30px);
   background-color: rgba(128, 128, 128, 0.376); 
   border-radius: 20px;
   color: $color-oscuro;
@@ -281,7 +285,7 @@ $titulos: (
     "caption (5).jpg",
     "caption (4).jpg",
     "caption (6).jpg",
-    "patolakeado.jpg"
+    "atun.jpg"
   );
 
   @for $i from 1 through length($principal_img) {
@@ -337,28 +341,29 @@ $titulos: (
 
 /*footer*/
 footer {
-  position: sticky; /*para que se quede fijo en la pantalla al hacer scroll*/
-  bottom: 0px;
   justify-content: space-around;
-  margin-top: 50px;
+  position: relative;
+
+  margin-top: 100px;
   background-color: $color-oscuro;
- div{
+  div {
     flex-wrap: wrap;
- }
+  }
   .foo_text {
     color: $text-color;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 
     p {
-      margin: 10px;
-      font-size: 20px;
+      margin: 1px;
+      font-size:clamp(10px, 2vw, 20px);
     }
   }
 
   .foo_icons i {
-    color:$text-color;
+    color: $text-color;
     margin: 10px;
-    font-size: 25px;
+    font-size:clamp(10px, 2vw, 20px);
   }
 }

@@ -3,7 +3,7 @@
 @mixin letraMarca{
     font-family: "Lobster", serif;
     font-weight: 400;
-    font-size:45px ;    
+       
 }
 
 @mixin letraTextos {
@@ -11,9 +11,9 @@
     
 }
 //variables 
-$text-color: blanchedalmond;
-$color-oscuro: #4c6161f9;
-$color-background: #2f4f4f;
+$text-color: #ffebcc;
+$color-oscuro:#192929f9;
+$color-background:#305050;
 $gradient-text: linear-gradient(90deg, #ff7e5f, #feb47b);
 
 
@@ -46,7 +46,7 @@ header{
     h3{
         position: relative;
         top: 230px;
-        font-size:50px;
+        font-size: clamp(25px, 5vw, 45px);
         font-family: "Henny Penny", serif;
         color:$text-color;
         animation: animacionH3 5s ease;
@@ -82,7 +82,7 @@ header{
         top: 30%;
         color:$text-color;
         text-shadow: 1px 2px #ee9f16;
-        font-size: 2.5rem;
+        font-size: clamp(24px, 6vw, 55px);
         font-weight: 900;
         text-align: center;
         text-transform: uppercase;
@@ -138,10 +138,11 @@ section{
    }
    .card-body{
     position: absolute;
-    min-height: 300px; /* Ajusta según necesites */
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     text-align: center;
     color:  #0e1d1d; 
@@ -183,7 +184,9 @@ section{
     transition: 0.5s;
 }
 &:hover a{
+    transition: all 0.5s;
     visibility: visible;
+    border-radius: 5px;
 }
 
    .btn{
@@ -205,13 +208,15 @@ footer {
     }
     .foo_text {
       color: $text-color;
+      padding-top: 10px;
+      padding-bottom: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
   
       p {
         margin: 1px;
-        font-size:clamp(10px, 2vw, 20px);
+        font-size:clamp(15px, 2vw, 20px);
       }
     }
   
@@ -222,3 +227,52 @@ footer {
     }
   }
   
+
+  //imagenes articulos
+
+  @keyframes animacionImg{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(50px);
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+  .img_dubai {
+    animation: animacionImg 5s linear;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    p{
+        font-size:clamp(12px, 2vw, 20px);
+        @include letraTextos();
+        font-weight: 600;
+        //visibility: hidden;
+        width: 0px;
+    }
+  
+  img{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    //border-radius: 50%;
+    &:hover{
+        border-radius: none;
+        width: 400px;
+        height: 400px;
+     // transform: scale(1.2);
+      transition: 0.5s;
+    }
+     &:hover .img_dubai p{
+        visibility: visible;
+        width: 60%;
+        transition: 0.5s;
+    } 
+    
+  }
+}

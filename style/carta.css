@@ -20,9 +20,6 @@ header button {
   background-color: blanchedalmond !important;
 }
 
-/* button {
-  color: $text-color;
-} */
 h3 {
   position: relative;
   top: 50px;
@@ -140,7 +137,7 @@ h2::first-letter {
   color: blanchedalmond;
   font-family: "new-spirit,serif";
   font-weight: 600;
-  font-size: 35px;
+  font-size: clamp(15px, 2vw, 20px);
 }
 
 .card-body {
@@ -274,7 +271,7 @@ h2::first-letter {
   font-family: "Lobster", serif;
   font-weight: 400;
   font-weight: 200;
-  font-size: 35px;
+  font-size: clamp(25px, 3vw, 40px);
   filter: saturate(200%);
 }
 .principal h4::first-letter {
@@ -451,6 +448,8 @@ h2::first-letter {
 footer {
   justify-content: space-around;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-top: 100px;
   background-color: rgba(24, 41, 41, 0.9764705882);
 }
@@ -465,7 +464,7 @@ footer .foo_text {
 }
 footer .foo_text p {
   margin: 1px;
-  font-size: clamp(10px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
 }
 footer .foo_icons i {
   color: blanchedalmond;

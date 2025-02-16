@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   filter: blur(0.5);
   background-color: rgb(225, 208, 183);
@@ -16,18 +15,18 @@ header nav {
   background-color: transparent;
 }
 header nav .navbar-toggler {
-  color: blanchedalmond;
-  background-color: blanchedalmond;
+  color: #ffebcc;
+  background-color: #ffebcc;
 }
 header button {
-  color: blanchedalmond;
+  color: #ffebcc;
 }
 header h3 {
   position: relative;
   top: 230px;
-  font-size: 50px;
+  font-size: clamp(25px, 5vw, 45px);
   font-family: "Henny Penny", serif;
-  color: blanchedalmond;
+  color: #ffebcc;
   animation: animacionH3 5s ease;
   font-style: normal;
   font-weight: 900;
@@ -57,9 +56,9 @@ header h1 {
   animation: ease animacion 5s;
   position: relative;
   top: 30%;
-  color: blanchedalmond;
+  color: #ffebcc;
   text-shadow: 1px 2px #ee9f16;
-  font-size: 2.5rem;
+  font-size: clamp(24px, 6vw, 55px);
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
@@ -71,7 +70,7 @@ header .offcanvas {
   margin-left: 20px;
 }
 header .offcanvas-body {
-  background-color: #2f4f4f;
+  background-color: #305050;
   padding-left: 100px;
 }
 header .offcanvas-header {
@@ -107,10 +106,11 @@ section {
 }
 .card .card-body {
   position: absolute;
-  min-height: 300px; /* Ajusta según necesites */
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
   text-align: center;
   color: #0e1d1d;
@@ -118,7 +118,6 @@ section {
 .card .card-title {
   font-family: "Lobster", serif;
   font-weight: 400;
-  font-size: 45px;
   font-weight: bold;
   font-size: clamp(20px, 2vw, 35px);
 }
@@ -145,11 +144,13 @@ section {
   transition: 0.5s;
 }
 .card:hover a {
+  transition: all 0.5s;
   visibility: visible;
+  border-radius: 5px;
 }
 .card .btn {
   background-color: #0e1d1d;
-  color: blanchedalmond;
+  color: #ffebcc;
 }
 
 /*footer*/
@@ -157,23 +158,67 @@ footer {
   justify-content: space-around;
   position: relative;
   margin-top: 100px;
-  background-color: rgba(76, 97, 97, 0.9764705882);
+  background-color: rgba(25, 41, 41, 0.9764705882);
 }
 footer div {
   flex-wrap: wrap;
 }
 footer .foo_text {
-  color: blanchedalmond;
+  color: #ffebcc;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 footer .foo_text p {
   margin: 1px;
-  font-size: clamp(10px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
 }
 footer .foo_icons i {
-  color: blanchedalmond;
+  color: #ffebcc;
   margin: 10px;
   font-size: clamp(10px, 2vw, 20px);
+}
+
+@keyframes animacionImg {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50px);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.img_dubai {
+  animation: animacionImg 5s linear;
+  text-align: center;
+  align-content: center;
+  flex-direction: column;
+}
+.img_dubai p {
+  font-size: clamp(12px, 2vw, 20px);
+  font-family: "new-spirit,serif";
+  font-weight: 600;
+  width: 0px;
+}
+.img_dubai img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+.img_dubai img:hover {
+  border-radius: none;
+  width: 400px;
+  height: 400px;
+  transition: 0.5s;
+}
+.img_dubai img:hover .img_dubai p {
+  visibility: visible;
+  width: 60%;
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */

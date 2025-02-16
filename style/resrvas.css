@@ -1,79 +1,31 @@
 body {
   filter: sepia(100px);
-  background-color: rgba(24, 41, 41, 0.9764705882);
+  background-color: #f8eac6;
 }
 
 header {
-  background-image: url("/img/manipulation-4412444_1280.jpg");
-  background-color: 0.2;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgba(25, 41, 41, 0.9764705882);
   width: 100vw;
   height: 10vh;
 }
 header nav {
-  background-color: transparent;
+  background-color: rgba(25, 41, 41, 0.9764705882);
 }
 header nav .navbar-toggler {
-  color: blanchedalmond;
-  background-color: blanchedalmond;
+  color: #f8eac6;
+  background-color: #f8eac6;
 }
 header button {
-  color: blanchedalmond;
-}
-header h3 {
-  position: relative;
-  top: 230px;
-  font-size: 50px;
-  font-family: "Henny Penny", serif;
-  font-weight: 400;
-  font-size: 45px;
-  color: #667f61;
-  text-shadow: 1px 2px #603008;
-  animation: animacionH3 5s ease;
-  font-style: normal;
-  font-weight: 900;
-}
-@keyframes animacion {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes animacionH3 {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(50px);
-    opacity: 1;
-  }
-}
-header h1 {
-  animation: animacion 5s;
-  position: relative;
-  top: 30%;
-  color: #667f61;
-  font-family: "new-spirit", serif;
-  text-shadow: 1px 2px #603008;
-  font-size: 2.5rem;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
+  color: #f8eac6;
 }
 header .nav-link {
-  color: blanchedalmond !important;
+  color: #f8eac6 !important;
 }
 header .offcanvas {
   margin-left: 20px;
 }
 header .offcanvas-body {
-  background-color: rgba(24, 41, 41, 0.9764705882);
+  background-color: rgba(25, 41, 41, 0.9764705882);
   padding-left: 100px;
 }
 header .offcanvas-header {
@@ -85,20 +37,21 @@ header .offcanvas-header {
 
 footer {
   width: 100%;
-  position: absolute; /*para que se quede fijo en la pantalla al hacer scroll*/
-  bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
   justify-content: space-around;
   margin-top: 50px;
   background-color: rgb(20, 37, 37);
 }
 footer .foo_text {
-  color: blanchedalmond;
+  color: #f8eac6;
   display: flex;
   justify-content: space-around;
 }
 footer .foo_text p {
   margin: 10px;
-  font-size: 20px;
+  font-size: clamp(15px, 3vw, 20px);
 }
 footer .foo_icons i {
   color: bisque;
@@ -116,30 +69,32 @@ main {
   padding: 20px;
   margin-top: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 blanchedalmond;
-  width: 50%;
-  height: 100%;
-  margin-left: 25%;
-  margin-right: 25%;
+  box-shadow: 0 0 10px 0 #f8eac6;
+  background-color: rgba(25, 41, 41, 0.9764705882);
   margin-bottom: 50px;
   text-align: center;
 }
 .container .destino {
-  color: rgba(24, 41, 41, 0.9764705882);
-  font-weight: 900;
-  font-family: "Henny Penny", serif;
+  letter-spacing: 3px;
+  color: #f8eac6;
+  font-weight: 400;
+  font-family: "Lobster", serif;
+  font-weight: 400;
 }
 .container form {
   overflow: hidden;
-  background-color: rgba(202, 206, 204, 0.806);
+  background-color: rgba(25, 41, 41, 0.9764705882);
   border-radius: 10px;
   opacity: 0.9;
   width: 100%;
   height: 80%;
   font-weight: 900;
-  /*  overflow:scroll;
-   scrollbar-color:$color-oscuro $$text-color; */
   margin-top: 20px;
+}
+.container form label {
+  color: #f8eac6;
+  font-family: "new-spirit,serif";
+  font-size: 20px;
 }
 .container form input {
   margin-top: 10px;
@@ -147,10 +102,10 @@ main {
   margin: 15px;
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid rgba(24, 41, 41, 0.9764705882);
-  background-color: transparent;
+  border: 2px solid #305050;
+  background-color: #f8eac6;
   border: none;
-  color: darkslategrey;
+  color: #305050;
   font-family: "new-spirit,serif";
   font-size: 20px;
 }
@@ -160,7 +115,7 @@ main {
   border-radius: 10px;
   border: none;
   background-color: rgb(14, 29, 29);
-  color: blanchedalmond;
+  color: #f8eac6;
   font-family: "new-spirit,serif";
   font-size: 20px;
 }/*# sourceMappingURL=resrvas.css.map */

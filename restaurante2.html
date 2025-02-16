@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link href="style/restaurante.css" rel="stylesheet">
+  <title>Restaurante Dubai</title>
+</head>
+
+<body>
+  <header class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+          <button class="btn me-4 mt-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Reservar</button>
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="principal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="restaurante.html">Estambul</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="restaurante.html" tabindex="-1" aria-disabled="true">Dubai</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="restaurante.html" tabindex="-1" aria-disabled="true">Seul</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="carta.html" tabindex="-1" aria-disabled="true">Carta</a>
+            </li>
+
+
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!--menu desplegable para ir a restaurantes y pagina reserva-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasTopLabel">Elige destino</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="carta.html">Dubai</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carta.html">Seúl</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carta.html" tabindex="-1" aria-disabled="true">Estambúl</a>
+          </li>
+          <li class="nav-item"></li>
+          <a class="nav-link " href="reservas.html" tabindex="-1" aria-disabled="true">Reservas</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+
+
+  </header>
+
+  <main class="container-fluid mt-5 text-center">
+    <p class="logo">Pirueta</p>
+    <section class="container-fluid" id="video">
+
+      <video autoplay loop muted>
+        <source src="/img/rest-estambul/portada.jpg" type="video/mp4">
+      </video>
+      <div class="video_contenido">
+        <h1>Bienvenido a Estambul</h1>
+      </div>
+    </section>
+
+    <section id="section-1" class="container">
+
+      <h4>¿Que entorno necesitas hoy?</h4>
+      <div class="d-flex">
+        <div class="text">
+          <p>Disfrutade una noche mágica compartela con quien más te apetezca un placer para los sentidos.</p>
+        </div>
+        <div class="imagenes container">
+
+          <div class="img1">
+            <div class="texto_img d-flex flex-column">
+              <h5>Barra</h5>
+              <p>El saber y el sabor se unen en nuestra barra, donde podrás disfrutar de los mejores menú degustación de comida fusión.</p>
+              </p>
+
+            </div>
+          </div>
+          <div class="img2">
+            <div class="texto_img d-flex flex-column">
+              <h5>Barra Privada</h5>
+              <p>Venir a degustar nuestros placeres culinarios con un coctelero y un chef unicamente dedicado a vuestra mesa para que podaís ver en vivo como se elaboran cada plato.</p>
+            </div>
+          </div>
+          <div class="img3">
+            <div class="texto_img d-flex flex-column">
+              <h5>Sala con Vistas</h5>
+              <p>Comedor con vistas a la ciudad de Estambul.</p>
+            </div>
+          </div>
+          <div class="img4">
+            <div class="texto_img d-flex flex-column">
+              <h5>Sumiller</h5>
+              <p>Mientras saboreas la gastronomía del país podrás descubrir la bodega.</p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+    <section>
+
+      <section id="section-2" class="container">
+        <h4>Aire  Libre</h4>
+        <div class="d-flex">
+          <div class="imagenes">
+            <div class="img11">
+
+              <div class="texto_img d-flex flex-column">
+                <h5>Terraza Extarior </h5>
+                <p>Si eres de comer en espacios exteriores este es tu lugar, vistas y buena gastronomía quien puede resistire a tal placer para los sentidos.</p>
+              </div>
+
+            </div>
+            <div class="img12">
+              <div class="texto_img d-flex flex-column">
+               <!--  <h5>Bodegas de Champagne</h5>
+                <p>Desde los más tradicionales hasta los más novedodos champagnes del mundo.</p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="text">
+            <p>Los atardeceres al lado de nuestro rio consiguen sorprender a los visitantes por la gran diversidad de tonalidades de azules que se pueden observar.</p>
+          </div>
+        </div>
+      </section>
+      <section id="section-3" class="container">
+        <h4>Los cockteles són un de nuestras especialidades</h4>
+        <div class="d-flex">
+          <div class="text">
+            <p>Como miembro insignia de una comida al la altura del lujo de Dubai una exquisita bodega para un maridaje
+              perfecto.</p>
+          </div>
+          <div class="imagenes">
+            <div class="img6">
+              <div class="texto_img d-flex flex-column">
+                <h5>Sala Arte</h5>
+                <p>Salón privado con exposición de arte. Además de la intimidad sin que nadie os moleste podreís comprar las obras expuestas como si de nuestra galería privada se tratara.</p>
+              </div>
+            </div>
+            <div class="img7">
+              <div class="texto_img d-flex flex-column">
+                <h5>Sky club</h5>
+                <p>Por si no te habías fijado bien desde la azotea puedes divisar toda la ciudad.</p>
+              </div>
+            </div>
+
+            <div class="img9">
+              <div class="texto_img d-flex flex-column">
+                <h5>Terraza del Mar</h5>
+                <p>Los atardecres desde nuestro beach club no te dejarán indiferente.</p>
+              </div>
+            </div>
+            <div class="img10">
+              <div class="texto_img d-flex flex-column">
+                <h5>Terraza del Mar</h5>
+                <p>Puedes disfrutar de este maravilloso espacio a partir de las 17:00 horas.</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+  </main>
+
+
+  <footer class="d-flex">
+    <div class="foo_text">
+      <p>Preguntas Frecuentes</p>
+      <p>Contacto: 600 05 52 21</p>
+      <p>Email: pirueta@gmail.com</p>
+    </div>
+    <div class="foo_icons d-flex ">
+
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- <script src="script.js"></script> -->

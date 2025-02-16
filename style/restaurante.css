@@ -1,5 +1,4 @@
 body {
-  filter: grayscale(0.5);
   background-color: rgb(255, 235, 205);
 }
 
@@ -8,7 +7,13 @@ header {
   height: 10vh;
 }
 header nav {
-  background-color: rgba(76, 97, 97, 0.9764705882);
+  background-color: rgba(24, 41, 41, 0.9764705882);
+}
+header nav a::-moz-selection {
+  text-decoration: underline;
+}
+header nav a::selection {
+  text-decoration: underline;
 }
 header .navbar-toggler {
   color: blanchedalmond;
@@ -22,7 +27,7 @@ header button {
 .logo {
   font-family: "Henny Penny", serif;
   font-size: clamp(24px, 6vw, 40px);
-  color: rgba(76, 97, 97, 0.9764705882);
+  color: rgba(24, 41, 41, 0.9764705882);
 }
 
 h1 {
@@ -58,7 +63,7 @@ h1 {
 }
 
 .offcanvas-body {
-  background-color: rgba(76, 97, 97, 0.9764705882);
+  background-color: rgba(24, 41, 41, 0.9764705882);
   padding-left: 100px;
 }
 
@@ -97,8 +102,10 @@ video {
 }
 
 h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
   letter-spacing: 2px;
-  color: rgba(76, 97, 97, 0.9764705882);
+  color: rgba(24, 41, 41, 0.9764705882);
   font-family: "new-spirit,serif";
   font-weight: 200;
   font-size: clamp(25px, 3vw, 40px);
@@ -707,8 +714,10 @@ h4::first-letter {
 footer {
   justify-content: space-around;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-top: 100px;
-  background-color: rgba(76, 97, 97, 0.9764705882);
+  background-color: rgba(24, 41, 41, 0.9764705882);
 }
 footer div {
   flex-wrap: wrap;
@@ -721,7 +730,7 @@ footer .foo_text {
 }
 footer .foo_text p {
   margin: 1px;
-  font-size: clamp(10px, 2vw, 20px);
+  font-size: clamp(15px, 2vw, 20px);
 }
 footer .foo_icons i {
   color: blanchedalmond;

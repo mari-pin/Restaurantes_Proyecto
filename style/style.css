@@ -20,18 +20,18 @@ header nav {
   background-color: transparent;
 }
 header nav .navbar-toggler {
-  color: #ffebcc;
-  background-color: #ffebcc;
+  color: #fffdcd;
+  background-color: #fffdcd;
 }
 header button {
-  color: #ffebcc;
+  color: #fffdcd;
 }
 header h3 {
   position: relative;
   top: 230px;
   font-size: clamp(25px, 5vw, 45px);
   font-family: "Henny Penny", serif;
-  color: #ffebcc;
+  color: #fffdcd;
   animation: animacionH3 5s ease;
   font-style: normal;
   font-weight: 900;
@@ -61,7 +61,7 @@ header h1 {
   animation: ease animacion 5s;
   position: relative;
   top: 30%;
-  color: #ffebcc;
+  color: #fffdcd;
   text-shadow: 1px 2px #ee9f16;
   font-size: clamp(24px, 6vw, 55px);
   font-weight: 900;
@@ -69,7 +69,7 @@ header h1 {
   text-transform: uppercase;
 }
 header .nav-link {
-  color: #ffebcc !important;
+  color: #fffdcd !important;
 }
 header .offcanvas {
   margin-left: 20px;
@@ -97,7 +97,7 @@ section {
 /*plantilla para boton cards*/
 .card .btn {
   background-color: #0e1d1d;
-  color: #ffebcc;
+  color: #fffdcd;
 }
 
 .card {
@@ -168,7 +168,7 @@ footer div {
   flex-wrap: wrap;
 }
 footer .foo_text {
-  color: #ffebcc;
+  color: #fffdcd;
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: space-around;
@@ -178,7 +178,7 @@ footer .foo_text p {
   font-size: clamp(15px, 2vw, 20px);
 }
 footer .foo_icons i {
-  color: #ffebcc;
+  color: #fffdcd;
   margin: 10px;
   font-size: clamp(10px, 2vw, 20px);
 }

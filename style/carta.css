@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   filter: grayscale(0.5);
-  background-color: blanchedalmond;
+  background-color: #fffdcd;
 }
 
 header {
@@ -12,12 +12,12 @@ header nav {
   background-color: rgba(24, 41, 41, 0.9764705882);
 }
 header .navbar-toggler {
-  color: blanchedalmond;
-  background-color: blanchedalmond;
+  color: #fffdcd;
+  background-color: #fffdcd;
 }
 header button {
   color: #2f4f4f !important;
-  background-color: blanchedalmond !important;
+  background-color: #fffdcd !important;
 }
 
 h3 {
@@ -42,7 +42,7 @@ h3 {
   }
 }
 .nav-link {
-  color: blanchedalmond !important;
+  color: #fffdcd !important;
 }
 
 .offcanvas {
@@ -136,7 +136,7 @@ footer .foo_text, .container {
   margin: 10px;
 }
 .card h5, .card-9 h5, .card-8 h5, .card-7 h5, .card-6 h5, .card-5 h5, .card-4 h5, .card-3 h5, .card-2 h5, .card-1 h5 {
-  color: blanchedalmond;
+  color: #fffdcd;
   font-family: "new-spirit,serif";
   font-weight: 600;
   font-size: clamp(15px, 2vw, 20px);
@@ -156,7 +156,7 @@ footer .foo_text, .container {
   height: 100%;
   transition: 0.5s all ease-in-out;
   background-color: rgba(65, 66, 66, 0.568627451);
-  color: blanchedalmond;
+  color: #fffdcd;
 }
 
 .card-1 {
@@ -421,7 +421,7 @@ footer .foo_text, .container {
   border-radius: 600px;
 }
 .principal .card-text {
-  color: blanchedalmond;
+  color: #fffdcd;
   position: static;
   height: -moz-fit-content;
   height: fit-content;
@@ -448,7 +448,7 @@ footer div {
   flex-wrap: wrap;
 }
 footer .foo_text {
-  color: blanchedalmond;
+  color: #fffdcd;
   justify-content: space-around;
 }
 footer .foo_text p {
@@ -456,7 +456,7 @@ footer .foo_text p {
   font-size: clamp(15px, 2vw, 20px);
 }
 footer .foo_icons i {
-  color: blanchedalmond;
+  color: #fffdcd;
   margin: 10px;
   font-size: clamp(10px, 2vw, 20px);
 }/*# sourceMappingURL=carta.css.map */

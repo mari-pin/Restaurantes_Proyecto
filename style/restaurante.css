@@ -505,7 +505,6 @@ h4::first-letter {
 
 @media (max-width: 768px) {
   .imagenes {
-    flex-direction: column;
     position: relative;
     text-align: center;
     justify-content: center;

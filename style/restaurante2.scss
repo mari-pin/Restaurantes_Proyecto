@@ -1,0 +1,372 @@
+//colores
+$text-color: blanchedalmond;
+$color-oscuro:#182929f9;
+$color-background:#2f4f4f;
+$gradient-text: linear-gradient(90deg, #ff7e5f, #feb47b);
+
+
+
+// tamaños
+$border-radius: 10px;
+$gap-img: 20px;
+$width-img: 100px;
+$height-img: 500px;
+
+
+%flex-column{
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+
+@mixin letraMarca {
+  font-family:"Lobster", serif;
+  font-weight: 400;
+ 
+}
+
+@mixin letraTextos {
+  font-family: "new-spirit,serif";
+}
+
+
+
+
+
+body {
+  //filter: grayscale(0.5);
+  background-color: rgb(255, 235, 205);
+}
+header {
+  width: 100vw;
+  height: 10vh;
+
+  nav {
+    background-color:$color-oscuro;
+  }
+  nav a::selection{
+   text-decoration: underline;
+  }
+  .navbar-toggler {
+    color: $text-color;
+    background-color: $text-color;
+  }
+  button {
+    color:$color-background !important;
+    background-color: $text-color !important;
+  }
+  
+}
+
+.logo{
+  font-family: "Henny Penny", serif;
+
+  font-size: clamp(24px, 6vw, 40px);
+  color: $color-oscuro;
+
+}
+h1{
+  position: relative;
+  font-size: clamp(24px, 6vw, 55px);
+  @include letraMarca(); 
+   background: linear-gradient(90deg, #f98267, #faea58);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animacionH3 5s ease;
+  font-style: normal;
+  font-weight: 500;
+}
+@keyframes animacionH3 {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+}
+
+.nav-link {
+  color: $text-color !important;
+}
+.offcanvas {
+  margin-left: 20px;
+}
+
+.offcanvas-body {
+  background-color: $color-oscuro;
+  padding-left: 100px;
+}
+.offcanvas-header {
+  margin-left: 50px;
+  height: 20%;
+  @include letraTextos();
+  font-size: 20px;
+}
+
+
+#img-fondo{
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  z-index: -1;
+
+}
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transform: translate(-50%, -50%);
+}
+.video_contenido{
+  position: relative;
+  z-index: 1; 
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+@mixin imagenes ($width: $width-img, $height: $height-img) {
+  width: $width;
+  height: $height;
+  gap: $gap-img;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin imgHover($width-hover: 1000px) {
+  width:$width-hover;
+  transition: linear 0.5s;
+}
+@mixin backgroundTextosImg {
+  background-color: rgba(128, 128, 128, 0.784);
+}
+h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color:$color-oscuro;
+  @include letraTextos();
+  font-weight: 200;
+  font-size: clamp(25px, 3vw, 40px);
+  filter: drop-shadow(2px 2px 2px #d4993a);
+  &::first-letter {
+    font-size: 55px;
+  }
+}
+
+.imagenes:hover ~ .text{
+ visibility: hidden;
+  width: 0px;
+
+}
+.img1{
+  width: 500px;
+}
+.text{
+  font-size: clamp(10px, 2vw, 20px);
+  text-wrap: wrap;
+  word-wrap: break-word;
+  width: 20%;
+  position: relative;
+  top: 200px;
+  
+  letter-spacing: 2px;
+  @include letraTextos();
+  
+}
+//imagenes
+$imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10;
+
+.imagenes {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ border-radius: $border-radius;
+ margin-bottom: 10px;
+ 
+
+ //puedo eliminarlo aun por si quiero dejar lo anterior para que algunas imagenes tengan un tamaño diferente
+ @each $img in $imagenes {
+  .#{$img} {
+    @include imagenes();
+    background-image: url("/img/rest-estambul/#{$img}.jpg");
+    @if $img == img1 or $img == img5 or $img == img10 {
+      width: 500px;
+    }
+  }
+
+ 
+}
+/* 
+  .img1 {
+    @include imagenes();
+    width: 500px;
+    background-image: url("/img/garden-sofa.jpg");
+  }
+  .img2 {
+    @include imagenes();
+    background-image: url("/img/atolye.jpg");
+  }
+
+  .img3 {
+    @include imagenes();
+    background-image: url("/img/caption.jpg");
+  }
+  .img4 {
+    @include imagenes();
+    background-image: url("/img/portada.jpg");
+  }
+
+  .img5 {
+    @include imagenes();
+    background-image: url("/img/knife-showcase.jpg");
+  }
+  .img6 {
+    @include imagenes();
+;
+    background-image: url("/img/rest_rascacielos2.jpg");
+  }
+  .img7 {
+    @include imagenes();
+    background-image: url("/img/rest_rascacielos1.jpg");
+  }
+  .img8 {
+    @include imagenes();
+    background-image: url("/img/tamoka-dubai.jpg");
+  }
+  .img9 {
+    @include imagenes();
+    background-image: url("/img/tamoka_-gallery-08-620c1da8cf6bd.jpg");
+  }
+  .img10 {
+    @include imagenes();
+    width: 500px;
+    background-image: url("/img/tamoka_-gallery-10-620c1dacbefbc.jpg");
+  }
+  .img11 {
+    @include imagenes();
+    width: 300px;
+    background-image: url("/img/wine-cellar-side.jpg");
+  }
+  .img12 {
+    @include imagenes();
+    background-image: url("/img/bodega_cavas.jpg");
+    width: 300px;
+  } */
+  
+}
+/*hace los hover de las imagenes*/
+
+@each $img in $imagenes {
+  .imagenes .#{$img}:hover {
+    @include imgHover();
+    .texto_img {
+      width: 50%;
+      border-radius: $border-radius;
+    }
+  }
+  .imagenes:hover .#{$img}:not(:hover) .texto_img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+.texto_img {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.784);
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  h5 {
+    word-wrap: break-word;
+    color: $text-color;
+    @include letraTextos();
+    font-weight: 600;
+    font-size: clamp(15px, 2vw, 20px);
+  }
+
+  p {
+    color: $text-color;
+    @include letraTextos();
+    font-size: clamp(15px, 2vw, 10px);
+  }
+}
+
+ @media  (max-width:768px) {
+
+  .imagenes {
+    @extend %flex-column;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+  }
+  @each $img in $imagenes {
+    .imagenes .#{$img} {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: $border-radius;
+    }
+  }
+
+  @each $img in $imagenes {
+    .imagenes .#{$img}:hover {
+      .texto_img {
+        position: fixed;
+        left: 0px;
+        text-align: center;
+        width: 60%;
+        transform: translateX(55px);
+      }
+    }
+   /*  .imagenes:hover .#{$img}:not(:hover) .texto_img {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    } */
+  }
+}
+ 
+.section{
+  width: 100%;
+  height: 100%;
+}
+/*footer*/
+footer {
+  justify-content: space-around;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 100px;
+  background-color: $color-oscuro;
+  div {
+    flex-wrap: wrap;
+  }
+  .foo_text {
+    color: $text-color;
+   @extend %flex-column;
+    justify-content: space-around;
+
+    p {
+      margin: 1px;
+      font-size:clamp(15px, 2vw, 20px);
+    }
+  }
+
+  .foo_icons i {
+    color: $text-color;
+    margin: 10px;
+    font-size:clamp(10px, 2vw, 20px);
+  }
+}

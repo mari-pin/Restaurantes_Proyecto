@@ -12,8 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Henny+Penny&family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Permanent+Marker&display=swap"
     rel="stylesheet">
-  <link href="style/restaurante.css" rel="stylesheet">
-  <title>Restaurante Dubai</title>
+  <link href="style/restaurante2.css" rel="stylesheet">
+  <title>Restaurante Estambul</title>
 </head>
 
 <body>
@@ -28,23 +28,23 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
           <button class="btn me-4 mt-2" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Reservar</button>
+            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" aria-label="Abrir menú de reservas">Reservar</button>
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="principal.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="principal.html" tabindex="0">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="restaurante.html">Estambul</a>
+              <a class="nav-link active" href="restaurante2.html" tabindex="0">Estambul</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="restaurante.html" tabindex="-1" aria-disabled="true">Dubai</a>
+              <a class="nav-link active" href="restaurante.html" tabindex="0" aria-disabled="true">Dubai</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="restaurante.html" tabindex="-1" aria-disabled="true">Seul</a>
+              <a class="nav-link active" href="restaurante.html" tabindex="0" aria-disabled="true">Seul</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="carta.html" tabindex="-1" aria-disabled="true">Carta</a>
+              <a class="nav-link active" href="carta.html" tabindex="0" aria-disabled="true">Carta</a>
             </li>
 
 
@@ -61,7 +61,7 @@
 
 
     <!--menu desplegable para ir a restaurantes y pagina reserva-->
-    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas offcanvas-top" tabindex="0" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
       <div class="offcanvas-header">
         <h5 id="offcanvasTopLabel">Elige destino</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -70,16 +70,16 @@
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="carta.html">Dubai</a>
+            <a class="nav-link" aria-current="page" href="reservas.html">Dubai</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carta.html">Seúl</a>
+            <a class="nav-link" href="reservas.html">Seúl</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carta.html" tabindex="-1" aria-disabled="true">Estambúl</a>
+            <a class="nav-link" href="reservas.html" tabindex="0" aria-disabled="true">Estambúl</a>
           </li>
           <li class="nav-item"></li>
-          <a class="nav-link " href="reservas.html" tabindex="-1" aria-disabled="true">Reservas</a>
+          <a class="nav-link " href="reservas.html" tabindex="0" aria-disabled="true">Reservas</a>
           </li>
         </ul>
 
@@ -92,22 +92,20 @@
 
   <main class="container-fluid mt-5 text-center">
     <p class="logo">Pirueta</p>
-    <section class="container-fluid" id="video">
+    <section class="container-fluid" id="img-fondo">
 
-      <video autoplay loop muted>
-        <source src="/img/rest-estambul/portada.jpg" type="video/mp4">
-      </video>
-      <div class="video_contenido">
-        <h1>Bienvenido a Estambul</h1>
+     <img src="/img/rest-estambul/portada.jpg" alt="imagen estambul portada">
+      <div class="img_contenido">
+        <h1 class="mt-5">Bienvenido a Estambul</h1>
       </div>
     </section>
 
     <section id="section-1" class="container">
 
-      <h4>¿Que entorno necesitas hoy?</h4>
+      <h4>Nuestros ambientes</h4>
       <div class="d-flex">
         <div class="text">
-          <p>Disfrutade una noche mágica compartela con quien más te apetezca un placer para los sentidos.</p>
+          <p>Creemos que para cualquier ocasión elegir un ambiente adecuado es muy importante.</p>
         </div>
         <div class="imagenes container">
 
@@ -133,8 +131,8 @@
           </div>
           <div class="img4">
             <div class="texto_img d-flex flex-column">
-              <h5>Sumiller</h5>
-              <p>Mientras saboreas la gastronomía del país podrás descubrir la bodega.</p>
+              <h5>Sala Arte</h5>
+              <p>Además de la intimidad sin que nadie os moleste podreís comprar las obras expuestas como si de nuestra galería privada se tratara.</p>
 
             </div>
 
@@ -149,10 +147,10 @@
     <section>
 
       <section id="section-2" class="container">
-        <h4>Aire  Libre</h4>
+        <h4>Aroma de Mar</h4>
         <div class="d-flex">
           <div class="imagenes">
-            <div class="img11">
+            <div class="img5">
 
               <div class="texto_img d-flex flex-column">
                 <h5>Terraza Extarior </h5>
@@ -160,50 +158,51 @@
               </div>
 
             </div>
-            <div class="img12">
+            <div class="img6">
               <div class="texto_img d-flex flex-column">
-               <!--  <h5>Bodegas de Champagne</h5>
-                <p>Desde los más tradicionales hasta los más novedodos champagnes del mundo.</p> -->
+              <h5>Terraza Exterior</h5>
+                <p>Vistas al mar 360 grados.</p>
               </div>
             </div>
           </div>
 
           <div class="text">
-            <p>Los atardeceres al lado de nuestro rio consiguen sorprender a los visitantes por la gran diversidad de tonalidades de azules que se pueden observar.</p>
+            <p>Los atardeceres al lado del mar consiguen sorprender a los visitantes por la gran diversidad de tonalidades de azules que se pueden observar.</p>
           </div>
         </div>
       </section>
       <section id="section-3" class="container">
-        <h4>Los cockteles són un de nuestras especialidades</h4>
+        <h4>Dejate sorprender por nuestros cocckteles y el nigth club</h4>
         <div class="d-flex">
           <div class="text">
-            <p>Como miembro insignia de una comida al la altura del lujo de Dubai una exquisita bodega para un maridaje
-              perfecto.</p>
+            <p>La cocktelería de nuestro restaurante es famosa en toda la cuidad, no puedes irte sin probar alguno de ellos todos con una esencia especial.</p>
           </div>
           <div class="imagenes">
-            <div class="img6">
-              <div class="texto_img d-flex flex-column">
-                <h5>Sala Arte</h5>
-                <p>Salón privado con exposición de arte. Además de la intimidad sin que nadie os moleste podreís comprar las obras expuestas como si de nuestra galería privada se tratara.</p>
-              </div>
-            </div>
             <div class="img7">
               <div class="texto_img d-flex flex-column">
-                <h5>Sky club</h5>
-                <p>Por si no te habías fijado bien desde la azotea puedes divisar toda la ciudad.</p>
+                <h5>Old Fashioned</h5>
+                <p>Whisky bourbon, angostura, azúcar y cáscara de naranja con licuado de fresa o de limón.</p>
+                </p>
+              </div>
+            </div>
+            <div class="img8">
+              <div class="texto_img d-flex flex-column">
+                <h5>Smoked Maple Whiskey</h5>
+                <p>Whisky bourbon, jarabe de arce, romero, angostura, limon exprimido,soda y hielo</p>
               </div>
             </div>
 
             <div class="img9">
               <div class="texto_img d-flex flex-column">
-                <h5>Terraza del Mar</h5>
-                <p>Los atardecres desde nuestro beach club no te dejarán indiferente.</p>
+                <h5>Blue Lagoon Twilight</h5>
+                <p>Vodka,  licor Blue Curaçao, jugo de limón, jarabe de azúcar, Soda de lima-limón y hielo.</p>
               </div>
             </div>
             <div class="img10">
               <div class="texto_img d-flex flex-column">
-                <h5>Terraza del Mar</h5>
-                <p>Puedes disfrutar de este maravilloso espacio a partir de las 17:00 horas.</p>
+                <h5>Nigth Club</h5>
+                <p>La sala de baile no podía faltar ubicada en el sotano de nuestro restaurante.</p>
+  
               </div>
             </div>
           </div>
@@ -223,8 +222,8 @@
     </div>
     <div class="foo_icons d-flex ">
 
-      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des"><i class="fa-brands fa-tiktok fs-3"></i></a>
+      <a href="https://www.instagram.com/?rcs=ATD-zYJgssFOYu0ESb6YVl4xGAYViyVU7j3dY5vmpoMV3_-d3CgdCOoEKC75Gus6eZk32v97N_l75piuql_JZTbz6IKtRTrMRbjO4W2Vw2MeM7F_Uf6Me_fC0zUnJoyllL_v83l1itlbEa3KzRLHVo4mlV4Q8xxqL4s41w"><i class="fa-brands fa-instagram fs-3"></i></a>
     </div>
   </footer>
 

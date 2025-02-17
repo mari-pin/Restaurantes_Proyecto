@@ -1,6 +1,11 @@
+.img_dubai, footer .foo_text, .card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   filter: blur(0.5);
-  background-color: rgb(225, 208, 183);
+  background-color: #e1d0b7;
 }
 
 header {
@@ -64,7 +69,7 @@ header h1 {
   text-transform: uppercase;
 }
 header .nav-link {
-  color: blanchedalmond !important;
+  color: #ffebcc !important;
 }
 header .offcanvas {
   margin-left: 20px;
@@ -89,6 +94,12 @@ section {
   margin-right: auto;
 }
 
+/*plantilla para boton cards*/
+.card .btn {
+  background-color: #0e1d1d;
+  color: #ffebcc;
+}
+
 .card {
   border-radius: 20px;
   background-color: rgb(180, 163, 137);
@@ -107,8 +118,6 @@ section {
 .card .card-body {
   position: absolute;
   min-height: 300px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -148,11 +157,6 @@ section {
   visibility: visible;
   border-radius: 5px;
 }
-.card .btn {
-  background-color: #0e1d1d;
-  color: #ffebcc;
-}
-
 /*footer*/
 footer {
   justify-content: space-around;
@@ -167,8 +171,6 @@ footer .foo_text {
   color: #ffebcc;
   padding-top: 10px;
   padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 footer .foo_text p {
@@ -198,7 +200,6 @@ footer .foo_icons i {
   animation: animacionImg 5s linear;
   text-align: center;
   align-content: center;
-  flex-direction: column;
 }
 .img_dubai p {
   font-size: clamp(12px, 2vw, 20px);

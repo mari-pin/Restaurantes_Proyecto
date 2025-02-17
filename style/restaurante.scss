@@ -299,7 +299,7 @@ $imagenes: img1 img2 img3 img4 img5 img6 img7 img8 img9 img10 img11 img12;
  @media  (max-width:768px) {
 
   .imagenes {
-    flex-direction: column;
+    @extend %flex-column;
     position: relative;
     text-align: center;
     justify-content: center;
@@ -348,8 +348,7 @@ footer {
   }
   .foo_text {
     color: $text-color;
-    display: flex;
-    flex-direction: column;
+   @extend %flex-column;
     justify-content: space-around;
 
     p {

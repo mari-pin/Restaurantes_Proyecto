@@ -30,19 +30,5 @@ document.addEventListener("DOMContentLoaded", function () {
         datosUsuario.style.display = "none";
     });
 
-    // Añadir evento a los botones de alergenos
-  /*   const botones = document.querySelectorAll(".ver-alergenos");
-    
-    botones.forEach(boton => {
-        boton.addEventListener("click", function () {
-            const alergenos = this.getAttribute("data-alergenos");
-            alert("Alérgenos: " + alergenos);
-        });
-    });
-
- */
-
-
-  
     
 });
